@@ -1,94 +1,174 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { cn } from '@/lib/utils'; 
+import { cn } from '@/lib/utils';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
-interface HeaderProps {
-  theme?: 'dark' | 'light';
-}
+gsap.registerPlugin(useGSAP);
 
-export function Header({ theme: initialTheme = 'light' }: HeaderProps) {
+const projectLinks = [
+  { href: '/projekty/godomy-o-edukacji', label: 'Godomy o edukacji' },
+  { href: '/projekty/rodzinny-restart', label: 'Rodzinny restart' },
+  { href: '/projekty/pierwsza-pomoc-przedpsychologiczna', label: 'Pierwsza Pomoc Przedpsychologiczna' },
+  { href: '/projekty/milosc-na-cztery-lapy', label: 'Miłość na cztery łapy' },
+  { href: '/projekty/mas-zt', label: 'MAS-ZT' },
+  { href: '/projekty/zaloga-na-poklad', label: 'Załoga na pokład' },
+  { href: '/projekty/w-kolorowych-ramach', label: 'W kolorowych ramach' },
+];
+
+export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  const menuRef = useRef<HTMLDivElement>(null);
+  const linksRef = useRef<HTMLDivElement>(null);
+
+  // Reakcja na scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Strony z jasnym tłem na samej górze potrzebują ciemnego tekstu nawigacji
-  const lightPages = ['/kontakt', '/wolontariat', '/darowizna', '/parasol', '/parnterstwa', '/partycypacja'];
-  const theme = lightPages.includes(pathname) ? 'light' : 'dark';
-  const isDark = theme === 'dark' && !isScrolled;
+  // Zamknij przy zmianie ścieżki
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
+  // Blokowanie scrolla pod spodem gdy menu jest otwarte
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
+  // Animacja pełnoekranowego menu GSAP
+  useGSAP(() => {
+    if (menuOpen) {
+      // Menu zjeżdża z góry
+      gsap.to(menuRef.current, {
+        y: "0%",
+        duration: 0.7,
+        ease: "expo.inOut"
+      });
+      // Linki wjeżdżają kaskadowo
+      gsap.fromTo(linksRef.current?.children ? Array.from(linksRef.current.children) : [], 
+        { y: 50, opacity: 0, rotationX: -20 },
+        { y: 0, opacity: 1, rotationX: 0, stagger: 0.05, duration: 0.5, ease: "power2.out", delay: 0.3 }
+      );
+    } else {
+      // Menu chowa się do góry
+      gsap.to(menuRef.current, {
+        y: "-100%",
+        duration: 0.6,
+        ease: "expo.inOut"
+      });
+    }
+  }, { dependencies: [menuOpen] });
+
+  // Dynamiczne kolory headera
+  const headerTextColor = menuOpen ? "text-[#e8e4df]" : "text-[#3ead8f]";
+  // Usunięto całkowicie bordery z logiki tła
+  const headerBgColor = menuOpen ? "bg-transparent" : (isScrolled ? "bg-[#e8e4df]" : "bg-transparent");
 
   return (
-    <header className={cn(
-      "fixed top-0 left-0 w-full z-50 transition-colors duration-200",
-      // Stała wysokość, zmienia się tylko tło i subtelna linia na dole po scrollu
-      isScrolled ? "bg-white border-b border-black/5" : "bg-transparent"
-    )}>
-      {/* w-full zamiast max-w. px-6 do px-16 rozciąga nawigację od krawędzi do krawędzi */}
-      <div className="w-full px-6 md:px-6 lg:px-6 py-1 grid grid-cols-3 items-center">
-        
-        {/* Lewa strona - Linki */}
-        <nav className={cn(
-          "hidden md:flex items-center justify-start gap-8 text-[15px] font-medium tracking-tight",
-          isDark ? "text-white/80" : "text-black/70"
-        )}>
-          <Link href="/o-nas" className={cn("transition-colors duration-200", isDark ? "hover:text-white" : "hover:text-black")}>o nas</Link>
-          <Link href="/dzialania" className={cn("transition-colors duration-200", isDark ? "hover:text-white" : "hover:text-black")}>działania</Link>
-          <Link href="/oferta" className={cn("transition-colors duration-200", isDark ? "hover:text-white" : "hover:text-black")}>oferta</Link>
-        </nav>
+    <>
+      {/* 1. ULTRA-MINIMALISTYCZNY GÓRNY PASEK (Zawsze na wierzchu, z-60) */}
+      <header className={cn(
+        "fixed inset-x-0 top-0 z-[60] transition-all duration-500 pointer-events-auto px-6 lg:px-10 py-4 lg:py-6 flex justify-between items-center",
+        headerBgColor,
+        headerTextColor
+      )}>
+        <Link 
+          href="/" 
+          onClick={() => setMenuOpen(false)}
+          className="font-heading tracking-tight font-medium text-2xl lg:text-3xl leading-none hover:opacity-70 transition-opacity z-10"
+        >
+          Fundacja Maszt
+        </Link>
 
-        {/* Środek - Logo */}
-        <div className="flex justify-center">
-          <Link href="/" className={cn(
-            "text-2xl font-bold tracking-tighter transition-colors duration-200",
-            isDark ? "text-white" : "text-black"
-          )}>
-            fundacja maszt.
-          </Link>
-        </div>
-
-        {/* Prawa strona - Linki + CTA */}
-        <div className={cn(
-          "hidden md:flex items-center justify-end gap-8 text-[15px] font-medium tracking-tight",
-          isDark ? "text-white/80" : "text-black/70"
-        )}>
-          <Link href="/projekty" className={cn("transition-colors duration-200", isDark ? "hover:text-white" : "hover:text-black")}>projekty</Link>
-          <Link href="/wolontariat" className={cn("transition-colors duration-200", isDark ? "hover:text-white" : "hover:text-black")}>wolontariat</Link>
-          <Link href="/kontakt" className={cn("transition-colors duration-200", isDark ? "hover:text-white" : "hover:text-black")}>kontakt</Link>
-          
-          {/* Separator */}
-          {/* <div className={cn("w-px h-4 mx-1 transition-colors duration-200", isDark ? "bg-white/30" : "bg-black/15")}></div> */}
-          
-          {/* Przycisk Wesprzyj */}
-          {/* <Link 
-            href="/darowizna" 
-            className={cn(
-              "group flex items-center gap-1.5 font-semibold tracking-tight hover:opacity-70 transition-opacity duration-200",
-              isDark ? "text-white" : "text-black"
-            )}
-          >
-            wesprzyj
-            <svg 
-              className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor" 
-              strokeWidth={2}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        {/* Nowy przycisk: zunifikowana czcionka, ramka (pill shape) i ikona hamburgera/X */}
+        <button 
+          onClick={() => setMenuOpen(!menuOpen)} 
+          className="flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-current font-sans text-sm md:text-base font-medium transition-all hover:opacity-70 z-10 bg-transparent"
+        >
+          <span>{menuOpen ? "Zamknij" : "Menu"}</span>
+          {menuOpen ? (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
-          </Link> */}
-        </div>
+          ) : (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+              <line x1="4" y1="8" x2="20" y2="8" />
+              <line x1="4" y1="16" x2="20" y2="16" />
+            </svg>
+          )}
+        </button>
+      </header>
 
+      {/* 2. PEŁNOEKRANOWE MENU (z-50, ukryte poza ekranem na start y: -100%) */}
+      <div 
+        ref={menuRef}
+        className="fixed inset-0 z-[50] bg-[#3ead8f] text-[#e8e4df] flex flex-col pt-32 lg:pt-40 px-6 lg:px-10 pb-10 overflow-y-auto"
+        style={{ transform: "translateY(-100%)" }}
+      >
+        <div className="max-w-8xl mx-auto w-full h-full flex flex-col justify-between">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            {/* Lewa strona - Wielki napis informacyjny */}
+            <div className="lg:col-span-4 flex flex-col">
+              <span className="font-mono text-xs uppercase tracking-widest opacity-60 mb-6 border-b border-[#e8e4df]/20 pb-4">
+                Nasza działalność
+              </span>
+              <p className="font-sans text-xl lg:text-2xl leading-relaxed opacity-90 pr-10">
+                Odkryj projekty, w których budujemy infrastrukturę społeczną, by ludzie mogli doświadczać bycia wartością.
+              </p>
+            </div>
+
+            {/* Prawa strona - Ogromna lista projektów */}
+            <div className="lg:col-span-8 flex flex-col gap-2 lg:gap-4" ref={linksRef}>
+              {projectLinks.map(({ href, label }, i) => {
+                const isActive = pathname === href || (href !== '/' && pathname.startsWith(href + '/'));
+                return (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={() => setMenuOpen(false)}
+                    className={cn(
+                      "group flex items-baseline gap-4 font-heading text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tighter leading-[1.05] transition-all duration-300",
+                      isActive ? "opacity-100" : "opacity-60 hover:opacity-100 hover:translate-x-2"
+                    )}
+                  >
+                    <span className="font-mono text-sm opacity-50 mb-1">0{i + 1}</span>
+                    <span className="break-words">{label}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Stopka menu z kontaktem */}
+          <div className="mt-20 border-t border-[#e8e4df]/20 pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 font-mono text-xs uppercase tracking-widest opacity-70">
+            <div className="flex flex-col gap-2">
+              <a href="mailto:fundacja@maszt.org" className="hover:text-white transition-colors">fundacja@maszt.org</a>
+              <a href="tel:+48792220095" className="hover:text-white transition-colors">+48 792 220 095</a>
+            </div>
+            <div className="flex flex-col gap-2 sm:text-right">
+              <span>ul. Energetyków 22</span>
+              <span>44-200 Rybnik</span>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </header>
+    </>
   );
 }
