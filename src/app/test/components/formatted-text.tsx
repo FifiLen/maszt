@@ -16,8 +16,9 @@ export function FormattedText({ text }: { text?: string }) {
       const keywords = gsap.utils.toArray<HTMLElement>('.keyword-highlight');
       
       keywords.forEach((keyword) => {
+        // Animujemy szerokość tła (efekt malowania markerem)
         gsap.to(keyword, {
-          color: "#8c4693",
+          backgroundSize: "100% 40%", 
           scrollTrigger: {
             trigger: keyword,
             start: "top 85%",
@@ -44,8 +45,17 @@ export function FormattedText({ text }: { text?: string }) {
           return (
             <span 
               key={index} 
-              className="keyword-highlight transition-colors duration-300" 
-              style={{ fontWeight: "inherit" }} // Dziedziczymy weight z paragrafów klienta
+              className="keyword-highlight" 
+              style={{ 
+                fontWeight: "600", // Lekkie pogrubienie, żeby słowo i tak się wyróżniało
+                color: "inherit",  // Ważne: tekst zachowuje swój bazowy, CZYTELNY kolor
+                // Przygotowanie tła pod efekt zakreślacza (używamy rgba dla przezroczystości)
+                backgroundImage: "linear-gradient(120deg, rgba(46, 216, 164, 0.25) 0%, rgba(46, 216, 164, 0.25) 100%)",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "0% 40%", // Startowo tło ma 0% szerokości i 40% wysokości litery
+                backgroundPosition: "0 85%", // Obniżamy tło, żeby przypominało grube podkreślenie
+                display: "inline", // Zabezpieczenie, żeby tło dobrze łamało się w liniach
+              }}
             >
               {keyword}
             </span>

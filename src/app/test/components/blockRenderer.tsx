@@ -44,7 +44,7 @@ function FundingBannerBlock({ data }: { data: any }) {
                 <img 
                   src={img.url} 
                   alt={img.alt || ""} 
-                  className="h-10 md:h-14 w-auto object-contain"
+                  className="h-24 sm:h-32 md:h-40 lg:h-48 w-auto object-contain"
                 />
               </li>
             ))}
@@ -52,11 +52,11 @@ function FundingBannerBlock({ data }: { data: any }) {
         )}
 
         {images.length > 0 && data.content && (
-          <div className="hidden md:block w-px h-12 bg-[#3ead8f]/20" aria-hidden="true" />
+          <div className="hidden md:block w-px self-stretch min-h-[60px] bg-[#3ead8f]/20 mx-4" aria-hidden="true" />
         )}
 
         {data.content && (
-          <div className="max-w-md text-center md:text-left">
+          <div className="max-w-lg text-center md:text-left flex items-center">
             <p className="font-mono text-[10px] md:text-xs uppercase tracking-wider leading-relaxed text-[#3ead8f] opacity-80">
               <FormattedText text={data.content} />
             </p>
