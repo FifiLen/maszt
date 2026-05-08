@@ -89,9 +89,16 @@ export function Header() {
         <Link 
           href="/" 
           onClick={() => setMenuOpen(false)}
-          className="font-heading tracking-tight font-medium text-2xl lg:text-3xl leading-none hover:opacity-70 transition-opacity z-10"
+          className="hover:opacity-70 transition-opacity z-10 flex items-center -mt-2 md:-mt-3"
         >
-          Fundacja Maszt
+          <img 
+            src="https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69fcd0ea00013a609109/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjlmY2QwZjEwN2VjYjk2YmQwM2UiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjlmY2QwZWEwMDAxM2E2MDkxMDkiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjI5IiwiaWF0IjoxNzc4MTc2MjQxfQ.P0AH0eeE-9FkEkdOrOq-_3V6wPwBS0FVn0xY6bpBKe0" 
+            alt="Fundacja Maszt Logo" 
+            className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-all"
+            style={{ 
+              filter: menuOpen ? "brightness(0) invert(0.9) sepia(0.1) hue-rotate(180deg)" : "none" 
+            }}
+          />
         </Link>
 
         {/* Nowy przycisk: zunifikowana czcionka, ramka (pill shape) i ikona hamburgera/X */}

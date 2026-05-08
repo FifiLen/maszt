@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Fira_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { AppwritePing } from "@/components/AppwritePing";
+import { CookieBanner } from "@/components/CookieBanner";
+import { GoogleAnalyticsConsent } from "@/components/GoogleAnalyticsConsent";
 
-const generalSans = localFont({
-  src: "../../public/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.woff2",
-  variable: "--font-general-sans",
-  display: "swap",
-});
-
-const clashGrotesk = localFont({
-  src: "../../public/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Variable.woff2",
-  variable: "--font-clash-grotesk",
+const firaSans = Fira_Sans({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-fira-sans",
   display: "swap",
 });
 
@@ -30,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body
-        className={`${generalSans.variable} ${clashGrotesk.variable} antialiased font-sans flex flex-col min-h-screen`}
+        className={`${firaSans.variable} antialiased font-sans flex flex-col min-h-screen`}
       >
         <AppwritePing />
         <Header />
@@ -38,6 +35,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieBanner />
+        <GoogleAnalyticsConsent />
       </body>
     </html>
   );

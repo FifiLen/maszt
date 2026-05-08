@@ -10,16 +10,19 @@ const teamMembers = [
     name: "Alicja Sobik – Lipus",
     role: "Członkini Zarządu",
     description: "**psycholożka**, **psychoterapeuta**, była zaangażowana w działania związku zawodowego",
+    image: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69fcba460032f3d10c91/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjlmY2JhNGUyNDk4YzZjZGVlNzQiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjlmY2JhNDYwMDMyZjNkMTBjOTEiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjI1IiwiaWF0IjoxNzc4MTcwNDQ2fQ.R9fc4WzzOZXpRGMlwJ6NYg23K5ZuCbaxGBNV0bjoWEI",
   },
   {
     name: "Michał Naczyński",
     role: "Członek Zarządu",
     description: "**psycholog**, **psychoterapeuta**, **koordynator projektów** przy Stowarzyszeniu Oświatowym Rodzice-Dzieciom w Rybniku. Członek Zarządu Krajowego Ogólnopolskiego Związku Zawodowego Psychologów (2021-25)",
+    image: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69fcba970013c62dc3fc/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjlmY2JhOWQyYmI1MGM2Mjk0YmYiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjlmY2JhOTcwMDEzYzYyZGMzZmMiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjI2IiwiaWF0IjoxNzc4MTcwNTI1fQ.xe6EL4kVuiYatc0Gbww_pDnnx9YwVbFVmEwFE6XVrvs",
   },
   {
     name: "Magdalena Kufka",
     role: "Członkini Zarządu",
     description: "**psycholożka**, **psychoterapeuta** prowadziła projekty w Stowarzyszeniu Pod Wieżą przy rybnickim szpitalu psychiatrycznym",
+    image: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69fcbac800060b948646/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjlmY2JhY2RjZDdmNTM1YWU3ZjgiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjlmY2JhYzgwMDA2MGI5NDg2NDYiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjI3IiwiaWF0IjoxNzc4MTcwNTczfQ.bnXzEZrBAKM878qqef1kbCQlNm8WtyHpNmM6rdWoC0I",
   },
 ];
 
@@ -95,17 +98,28 @@ export default function AboutSection() {
               
               <div className="flex flex-col gap-10">
                 {teamMembers.map((member, index) => (
-                  <div key={index} className="flex flex-col">
-                    <h3 className="font-heading text-3xl lg:text-4xl uppercase tracking-tighter leading-none mb-3">
-                      {member.name}
-                    </h3>
-                    <span className="font-mono text-xs uppercase tracking-wider block opacity-60 mb-4">
-                      {member.role}
-                    </span>
-                    <p className="font-sans text-sm md:text-base leading-relaxed opacity-90">
-                      {/* Tutaj też FormattedText dla opisów członków zespołu */}
-                      <FormattedText text={member.description} />
-                    </p>
+                  <div key={index} className="flex gap-6 items-start">
+                    {member.image && (
+                      <div className="shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-xl overflow-hidden bg-[#3ead8f]/10 mt-1">
+                        <img 
+                          src={member.image} 
+                          alt={member.name} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="flex flex-col">
+                      <h3 className="font-heading text-3xl lg:text-4xl uppercase tracking-tighter leading-none mb-3">
+                        {member.name}
+                      </h3>
+                      <span className="font-mono text-xs uppercase tracking-wider block opacity-60 mb-4">
+                        {member.role}
+                      </span>
+                      <p className="font-sans text-sm md:text-base leading-relaxed opacity-90">
+                        {/* Tutaj też FormattedText dla opisów członków zespołu */}
+                        <FormattedText text={member.description} />
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
