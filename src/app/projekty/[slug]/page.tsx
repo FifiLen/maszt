@@ -54,6 +54,17 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
+  // Zostawiamy tylko pierwsze wystąpienie "section.full-image"
+  let hasFullImage = false;
+  const filteredBlocks = parsedBlocks.filter((block: any) => {
+    if (block.__component === "section.full-image" || block.__component === "section.staggered-images") {
+      if (hasFullImage) return false;
+      hasFullImage = true;
+      return true;
+    }
+    return true;
+  });
+
   return (
     <main className="min-h-screen bg-[#e8e4df] text-[#3ead8f] w-full flex flex-col relative">
       
@@ -81,7 +92,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       {/* Kontent z BlockRenderera */}
       <div className="w-full flex flex-col pb-24">
-        {parsedBlocks.map((block: any, index: number) => (
+        {filteredBlocks.map((block: any, index: number) => (
           <BlockRenderer key={index} block={block} index={index} />
         ))}
       </div>

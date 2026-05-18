@@ -333,12 +333,12 @@ function SponsorsBlock({ data }: { data: any }) {
 function FullImageBlock({ data }: { data: any }) {
   if (!data.image?.url) return null;
   return (
-    <div className="w-full py-10 flex justify-center">
-      <div className="w-full max-w-5xl overflow-hidden rounded-3xl h-[40vh] md:h-[60vh] relative bg-[#3ead8f]/5">
+    <div className="w-full flex justify-center mt-8 mb-16 md:mt-12 md:mb-24">
+      <div className="w-full h-[50vh] md:h-[70vh] lg:h-[90vh] relative bg-[#3ead8f]/10 overflow-hidden">
         <img 
           src={data.image.url} 
           alt={data.image.alt || "Zdjęcie projektu"} 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover origin-center"
         />
       </div>
     </div>
