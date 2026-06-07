@@ -55,6 +55,10 @@ const documents = [
     title: "Sprawozdanie z działalności 2024", 
     url: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31d36002ab0c39092/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjljMzFkM2MzNzEwNmUyZGIyMjciLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjljMzFkMzYwMDJhYjBjMzkwOTIiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjE5IiwiaWF0IjoxNzc0Mzk0Njg0fQ.AQ8OBjBpsP8lYhESx7ir7xWFsNgJss-aK968HpEsJEg" 
   },
+  { 
+    title: "Sprawozdanie finansowe merytoryczne 2025", 
+    url: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/6a250f4100259121a844/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNmEyNTBmNDk0NDVmMzgwNGJmMjIiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NmEyNTBmNDEwMDI1OTEyMWE4NDQiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjM0IiwiaWF0IjoxNzgwODEzNjQxfQ.GG-2aUw5DfVrOf1W8Arfgm4Gf5YV9sgNdDGdVhF9pi8" 
+  },
 ];
 
 export default function AboutSection() {
