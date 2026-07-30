@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "content:sync": "node scripts/sync-appwrite-content.mjs"
   },
   "dependencies": {
     "@fontsource/fira-sans": "^5.2.7",

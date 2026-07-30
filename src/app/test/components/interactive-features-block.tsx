@@ -14,7 +14,7 @@ export default function InteractiveFeaturesBlock({ data }: { data: any }) {
   const leftColRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       // Pinning the left column while the right column scrolls
       ScrollTrigger.create({
         trigger: containerRef.current,
@@ -51,7 +51,7 @@ export default function InteractiveFeaturesBlock({ data }: { data: any }) {
              <FormattedText text={data.heading} />
            </h3>
            <p className="mt-8 font-mono text-xs md:text-sm uppercase tracking-widest opacity-60">
-              Co osiągniemy współdziałając
+              {data.subheading || "Co osiągniemy współdziałając"}
            </p>
         </div>
 

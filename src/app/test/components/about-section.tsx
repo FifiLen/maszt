@@ -10,54 +10,54 @@ const teamMembers = [
     name: "Alicja Sobik – Lipus",
     role: "Członkini Zarządu",
     description: "**psycholożka**, **psychoterapeuta**, była zaangażowana w działania związku zawodowego",
-    image: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69fcba460032f3d10c91/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjlmY2JhNGUyNDk4YzZjZGVlNzQiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjlmY2JhNDYwMDMyZjNkMTBjOTEiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjI1IiwiaWF0IjoxNzc4MTcwNDQ2fQ.R9fc4WzzOZXpRGMlwJ6NYg23K5ZuCbaxGBNV0bjoWEI",
+    image: "/media/images/69fcba460032f3d10c91-alicja-sobik-fundacja.jpg",
   },
   {
     name: "Michał Naczyński",
     role: "Członek Zarządu",
     description: "**psycholog**, **psychoterapeuta**, **koordynator projektów** przy Stowarzyszeniu Oświatowym Rodzice-Dzieciom w Rybniku. Członek Zarządu Krajowego Ogólnopolskiego Związku Zawodowego Psychologów (2021-25)",
-    image: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69fcba970013c62dc3fc/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjlmY2JhOWQyYmI1MGM2Mjk0YmYiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjlmY2JhOTcwMDEzYzYyZGMzZmMiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjI2IiwiaWF0IjoxNzc4MTcwNTI1fQ.xe6EL4kVuiYatc0Gbww_pDnnx9YwVbFVmEwFE6XVrvs",
+    image: "/media/images/69fcba970013c62dc3fc-micha-naczynski-fundacja.jpg",
   },
   {
     name: "Magdalena Kufka",
     role: "Członkini Zarządu",
     description: "**psycholożka**, **psychoterapeuta** prowadziła projekty w Stowarzyszeniu Pod Wieżą przy rybnickim szpitalu psychiatrycznym",
-    image: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69fcbac800060b948646/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjlmY2JhY2RjZDdmNTM1YWU3ZjgiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjlmY2JhYzgwMDA2MGI5NDg2NDYiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjI3IiwiaWF0IjoxNzc4MTcwNTczfQ.bnXzEZrBAKM878qqef1kbCQlNm8WtyHpNmM6rdWoC0I",
+    image: "/media/images/69fcbac800060b948646-magdalena-kufka-fundacja.jpg",
   },
 ];
 
 const documents = [
   { 
     title: "Statut Fundacji Maszt", 
-    url: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31c1100299ec86a35/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjljMzFjMTYwOTIyOGE1ZWJkODgiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjljMzFjMTEwMDI5OWVjODZhMzUiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjE3IiwiaWF0IjoxNzc0Mzk0MzkwfQ.PeX93qlsB9VMwcjm2KumuYeLipUFKv4vN0DODTwEtV4" 
+    url: "/media/documents/69c31c1100299ec86a35-statut-fundacja-maszt-12.07.2024.pdf"
   },
   { 
     title: "Regulamin obiegu dokumentów finansowych", 
-    url: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31d85000edc341f89/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjljMzFkOGI3Mjk3YzYxZmQxZTYiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjljMzFkODUwMDBlZGMzNDFmODkiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjIwIiwiaWF0IjoxNzc0Mzk0NzYzfQ.xLBixvWzY_ngwu8YLqsH3V9Orpsnu18mRHsZjm2bFTc" 
+    url: "/media/documents/69c31d85000edc341f89-regulamin-obiegu-dokumentow-finansowych-1-1-.pdf"
   },
   { 
     title: "Polityka ochrony dzieci", 
-    url: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31e0c002d99c72101/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjljMzFlMTM3Y2RkMzYxOTVmMmYiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjljMzFlMGMwMDJkOTljNzIxMDEiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjIyIiwiaWF0IjoxNzc0Mzk0ODk5fQ.CEL1wtZ6xVTZJLNduvv9sJbJhZN7bpYOi6Hp1oHAegA" 
+    url: "/media/documents/69c31e0c002d99c72101-polityka-ochrony-dzieci.pdf"
   },
   { 
     title: "RODO", 
-    url: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31c670013f56a48be/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjljMzFjNmJiYWJmNWIxZDE3NWQiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjljMzFjNjcwMDEzZjU2YTQ4YmUiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjE4IiwiaWF0IjoxNzc0Mzk0NDc1fQ.G7D06dfwId3SahhySu2ZR6vn5jFAAF9PrajyIQH0fOs" 
+    url: "/media/documents/69c31c670013f56a48be-rodo-3-.pdf"
   },
   { 
     title: "Polityka ochrony – wersja graficzna", 
-    url: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31dc8000007d21afa/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjljMzFkY2NlYTZjY2QyZTY4ODUiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjljMzFkYzgwMDAwMDdkMjFhZmEiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjIxIiwiaWF0IjoxNzc0Mzk0ODI4fQ.Y5llNG_yaRa-Jhi_rWJFK76MkC3tN1tQWSpc_FRYbks" 
+    url: "/media/images/69c31dc8000007d21afa-polityka-ochrony-wersja-graficzna-dla-dzieci.jpg"
   },
   { 
     title: "Rozliczenie finansowe 2024", 
-    url: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31e3d0019550634ef/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjljMzFlNDIwZDFjZTQxYjg3NDAiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjljMzFlM2QwMDE5NTUwNjM0ZWYiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjIzIiwiaWF0IjoxNzc0Mzk0OTQ2fQ.5KJbvpuKw1AgmDzBkjYkobPU-yyrE5N_rEZf03SZVGY" 
+    url: "/media/documents/69c31e3d0019550634ef-rozliczenie-finansowe-2024.pdf"
   },
   { 
     title: "Sprawozdanie z działalności 2024", 
-    url: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31d36002ab0c39092/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjljMzFkM2MzNzEwNmUyZGIyMjciLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjljMzFkMzYwMDJhYjBjMzkwOTIiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjE5IiwiaWF0IjoxNzc0Mzk0Njg0fQ.AQ8OBjBpsP8lYhESx7ir7xWFsNgJss-aK968HpEsJEg" 
+    url: "/media/documents/69c31d36002ab0c39092-sprawozdanie-z-dzialalnosci-fundacji-2024-compressed.pdf"
   },
   { 
     title: "Sprawozdanie finansowe merytoryczne 2025", 
-    url: "https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/6a250f4100259121a844/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNmEyNTBmNDk0NDVmMzgwNGJmMjIiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NmEyNTBmNDEwMDI1OTEyMWE4NDQiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjM0IiwiaWF0IjoxNzgwODEzNjQxfQ.GG-2aUw5DfVrOf1W8Arfgm4Gf5YV9sgNdDGdVhF9pi8" 
+    url: "/media/documents/6a250f4100259121a844-sprawozdanie-finansowe-merytoryczne-fundacja-maszt-2025.pdf"
   },
 ];
 

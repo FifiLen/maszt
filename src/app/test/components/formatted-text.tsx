@@ -12,7 +12,7 @@ export function FormattedText({ text }: { text?: string }) {
   const containerRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       const keywords = gsap.utils.toArray<HTMLElement>('.keyword-highlight');
       
       keywords.forEach((keyword) => {
@@ -35,11 +35,38 @@ export function FormattedText({ text }: { text?: string }) {
 
   if (!text) return null;
 
-  const parts = text.split(/(\*\*.*?\*\*)/g);
+  const parts = text.split(
+    /(\*\*.*?\*\*|\[[^\]]+\]\((?:https?:\/\/|\/)[^)]+\)|\n)/g,
+  );
 
   return (
     <span ref={containerRef}>
       {parts.map((part, index) => {
+        if (part === "\n") {
+          return <br key={index} />;
+        }
+
+        const linkMatch = part.match(
+          /^\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)]+)\)$/,
+        );
+
+        if (linkMatch) {
+          const [, label, url] = linkMatch;
+          const isExternal = url.startsWith("http");
+
+          return (
+            <a
+              key={index}
+              href={url}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
+              className="font-semibold underline decoration-current/40 underline-offset-4 transition-opacity hover:opacity-60 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4"
+            >
+              {label}
+            </a>
+          );
+        }
+
         if (part.startsWith('**') && part.endsWith('**')) {
           const keyword = part.slice(2, -2);
           return (

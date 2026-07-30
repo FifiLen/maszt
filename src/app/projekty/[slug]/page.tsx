@@ -1,21 +1,11 @@
 import BlockRenderer from "@/app/test/components/blockRenderer";
-import { databases } from "@/lib/appwrite";
-import { Query } from "appwrite";
+import { getProjectBySlug, getProjects } from "@/lib/projects";
 import { notFound } from "next/navigation";
 
-export async function generateStaticParams() {
-  try {
-    const response = await databases.listDocuments(
-      "69c02ef9002fc00e846e",
-      "projects"
-    );
-    return response.documents.map((doc: any) => ({
-      slug: doc.projectSlug,
-    }));
-  } catch (err) {
-    console.error("Błąd podczas generowania ścieżek projektów:", err);
-    return [];
-  }
+export function generateStaticParams() {
+  return getProjects().map((project) => ({
+    slug: project.projectSlug,
+  }));
 }
 
 interface ProjectPageProps {
@@ -25,45 +15,23 @@ interface ProjectPageProps {
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const resolvedParams = await params; 
-  
-  let projectTitle = "";
-  let projectSlug = "";
-  let parsedBlocks: any[] = [];
-  
-  try {
-    const response = await databases.listDocuments(
-      "69c02ef9002fc00e846e", 
-      "projects", 
-      [
-        Query.equal("projectSlug", resolvedParams.slug)
-      ]
-    );
-    
-    if (response.documents.length > 0) {
-      const doc = response.documents[0];
-      projectTitle = doc.projectTitle;
-      projectSlug = doc.projectSlug;
-      parsedBlocks = JSON.parse(doc.contentBlocks || "[]");
-    }
-  } catch (err) {
-    console.error("Błąd pobierania danych z bazy dla projektu:", resolvedParams.slug, err);
-  }
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
-  if (!projectTitle) {
-    notFound();
-  }
+  if (!project) notFound();
 
-  // Zostawiamy tylko pierwsze wystąpienie "section.full-image"
-  let hasFullImage = false;
-  const filteredBlocks = parsedBlocks.filter((block: any) => {
-    if (block.__component === "section.full-image" || block.__component === "section.staggered-images") {
-      if (hasFullImage) return false;
-      hasFullImage = true;
-      return true;
-    }
-    return true;
-  });
+  // Zostawiamy tylko pierwsze wystąpienie dużej sekcji obrazowej.
+  const firstFullImageIndex = project.blocks.findIndex(
+    (block) =>
+      block.__component === "section.full-image" ||
+      block.__component === "section.staggered-images",
+  );
+  const filteredBlocks = project.blocks.filter(
+    (block, index) =>
+      (block.__component !== "section.full-image" &&
+        block.__component !== "section.staggered-images") ||
+      index === firstFullImageIndex,
+  );
 
   return (
     <main className="min-h-screen bg-[#e8e4df] text-[#3ead8f] w-full flex flex-col relative">
@@ -79,12 +47,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="w-full max-w-5xl flex flex-col items-center text-center border-b border-[#3ead8f]/10 pb-12">
           
           <span className="font-mono text-xs uppercase tracking-widest opacity-60 mb-6">
-             Projekt / {projectSlug}
+             Projekt / {project.projectSlug}
           </span>
           
           {/* Usunięto lg:text-[11vw], ustawiono bezpieczne stałe wielkości */}
           <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-medium leading-[0.9] tracking-tighter uppercase w-full">
-            {projectTitle}
+            {project.projectTitle}
           </h1>
           
         </div>
@@ -92,7 +60,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       {/* Kontent z BlockRenderera */}
       <div className="w-full flex flex-col pb-24">
-        {filteredBlocks.map((block: any, index: number) => (
+        {filteredBlocks.map((block, index) => (
           <BlockRenderer key={index} block={block} index={index} />
         ))}
       </div>

@@ -1,0 +1,645 @@
+[
+  {
+    "id": "69c03140002838c2bd2f",
+    "projectTitle": "W kolorowych ramach",
+    "projectSlug": "w-kolorowych-ramach",
+    "blocks": [
+      {
+        "__component": "section.funding-banner",
+        "content": "Projekt jest realizowany w ramach Projektu Solidarności **Europejskiego Korpusu Solidarności**.",
+        "image": {
+          "url": "/media/images/69c2f8b1002ad11255a3-finansowane-ue-fundacja.jpg",
+          "alt": "Finansowane przez Unię Europejską"
+        }
+      },
+      {
+        "__component": "section.full-image",
+        "image": {
+          "url": "/media/images/69c2a44a0017a6777604-fundacja-bg.jpg",
+          "alt": "W Kolorowych Ramach"
+        }
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "O projekcie",
+        "content": "Razem dla **neuroróżnorodności**! Dołącz do projektu, który zmienia rzeczywistość osób z **ADHD** i w spektrum **autyzmu**! Razem edukujemy, wspieramy i budujemy społeczność otwartą na **różnorodność**. Dla **młodzieży**, **rodziców**, **nauczycieli**, **seniorów** i wszystkich zainteresowanych tematyką **inkluzji**."
+      },
+      {
+        "__component": "section.features",
+        "heading": "Co robimy?",
+        "items": [
+          {
+            "title": "**Edukacja** bez barier",
+            "description": "Tworzymy **filmy**, **animacje** i materiały wyjaśniające, czym jest **neuroatypowość**."
+          },
+          {
+            "title": "**Wsparcie** dla nauczycieli i specjalistów",
+            "description": "Organizujemy praktyczne **warsztaty** i **konferencje** ułatwiające codzienną pracę z osobami z **ADHD** i **ASD**."
+          },
+          {
+            "title": "Budujemy otwartość i **zrozumienie**",
+            "description": "Spotykamy się w **szkołach** i społecznościach, przełamując **tabu** i wspierając rówieśników oraz rodziny."
+          },
+          {
+            "title": "Głos osób z **doświadczeniem**",
+            "description": "Przekazujemy pałeczkę uczestnikom – razem tworzymy **kampanie** i zmieniamy narrację o **neuroRÓŻNORODNOŚCI**."
+          }
+        ]
+      },
+      {
+        "__component": "section.full-image",
+        "image": {
+          "url": "/media/images/69c2a44a0017a6777604-fundacja-bg.jpg",
+          "alt": "Portal"
+        }
+      },
+      {
+        "__component": "section.benefits",
+        "heading": "Co zyskasz?",
+        "items": [
+          "Nowe **kompetencje** i **doświadczenie** przydatne na **rynku pracy**",
+          "**Satysfakcję** z udziału w ważnej **misji społecznej**",
+          "Pracę w zgranym, otwartym **zespole**",
+          "Poznasz ludzi z **pasją** i **zaangażowaniem**"
+        ]
+      },
+      {
+        "__component": "section.call-to-action-list",
+        "heading": "DOŁĄCZ DO NASZEJ DRUŻYNY I TWÓRZ ZMIANĘ!",
+        "intro": "Zależy Ci na tworzeniu otwartego, przyjaznego świata dla osób **neuroatypowych**, a może sam/a jesteś taką osobą?",
+        "listHeading": "Jak możesz się zaangażować?",
+        "items": [
+          "Pomagaj w organizacji **warsztatów**, **spotkań** i **wydarzeń**. Razem budujemy inną rzeczywistość!",
+          "Podziel się swoim **doświadczeniem**! Możesz udzielić nam **wywiadu** o Twoich odczuciach.",
+          "Masz własne przeżycia związane z **ADHD** lub **autyzmem**? Zostań współtwórcą/czyni **materiałów edukacyjnych** lub opowiedz swoją historię – Twoja perspektywa ma znaczenie.",
+          "Twórz z nami **filmy** i **animacje** lub pomóż nam szerzyć wiedzę w **mediach społecznościowych**. Każde udostępnienie to krok do większej świadomości!",
+          "Zaproś projekt do swojej **szkoły**!"
+        ]
+      },
+      {
+        "__component": "section.downloads",
+        "heading": "Dokumenty z projektu",
+        "files": [
+          {
+            "fileName": "Publikacja pokonferencyjna",
+            "fileFormat": "PDF",
+            "url": "/media/documents/6a0b09fb002cddc69bd5-publikacja-pokonferencyjna.pdf"
+          },
+          {
+            "fileName": "Neuroatypowi. Sami o sobie",
+            "fileFormat": "PDF",
+            "url": "/pobrane_pliki/neuroatypowi-sami-o-sobie.pdf"
+          }
+        ]
+      },
+      {
+        "__component": "section.contact-footer",
+        "heading": "Zgłoś się już dziś!",
+        "contactText": "Napisz do nas wkolorowychramach@maszt.org i odwiedź naszą stronę na **Facebooku**/**Instagramie** i wyślij wiadomość o chęci pomocy.",
+        "motto": "Pamiętaj: Każdy krok ma **znaczenie**!",
+        "shareLinks": [
+          "Facebook",
+          "X"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "69c0314000370dbf2bf3",
+    "projectTitle": "Załoga na pokład",
+    "projectSlug": "zaloga-na-poklad",
+    "blocks": [
+      {
+        "__component": "section.funding-banner",
+        "content": "**Fundacja Maszt** realizuje projekt „**Załoga na pokład**” finansowany przez **Narodowy Instytut Wolności** w ramach programu **PROO**. Wysokość dotacji – **56 328,00 zł**. Projekt realizowany będzie od kwietnia do końca października 2025 r.",
+        "images": [
+          {
+            "url": "/media/images/69c2fe3a003c6ec82045-proo-logo-fundacja.png",
+            "alt": "Logo Narodowy Instytut Wolności"
+          },
+          {
+            "url": "/media/images/69c2fe850019fdc31a79-logo-polska-fundacja.png",
+            "alt": "Logo PROO"
+          }
+        ]
+      },
+      {
+        "__component": "section.full-image",
+        "image": {
+          "url": "/media/images/69c2a44a0017a6777604-fundacja-bg.jpg",
+          "alt": "Załoga na pokład"
+        }
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "O projekcie",
+        "content": "Projekt zakłada wzmocnienie działań **organizacji** poprzez rozwój jej potencjału i zwiększenie zaangażowania **młodzieży** w **wolontariat długoterminowy**. W ramach zadania zrealizowane zostaną **warsztaty** podczas wyjazdu z free-**wolontariuszami** oraz działania promujące organizację w **lokalnej społeczności**."
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "Efekty i Rozwój",
+        "content": "Efektem projektu będzie wzrost poczucia **partycypacji** w budowaniu działalności i struktur **NGO** uczestników. Dzięki powstaniu modelu **wolontariatu** długoterminowego zwiększy się zaangażowanie młodzieży w działania **Fundacji**. Nawiązanie nowych **partnerstw** z instytucjami i społecznościami lokalnymi da szansę na partnerstwa projektowe. Przygotowana zostanie profesjonalna **identyfikacja wizualna** organizacji, obejmująca materiały promocyjne, co zwiększy jej **rozpoznawalność**."
+      },
+      {
+        "__component": "section.full-image",
+        "image": {
+          "url": "/media/images/69c2a44a0017a6777604-fundacja-bg.jpg",
+          "alt": "Załoga 2"
+        }
+      },
+      {
+        "__component": "section.recruitment-hub",
+        "heading": "Dołącz do nas",
+        "text": "Od 1 do 31 maja trwają **zapisy** chętnych na **wyjazd** do **Istebnej**.",
+        "callsToAction": [
+          {
+            "title": "**Zgłoszenie**",
+            "description": "Wypełnij **formularz zgłoszeniowy** na wyjazd",
+            "linkText": "**Formularz rekrutacyjny**",
+            "linkUrl": "#"
+          }
+        ]
+      },
+      {
+        "__component": "section.downloads",
+        "heading": "Pliki do pobrania",
+        "files": [
+          {
+            "fileName": "**Wyjazd** – **Istebna** – **Regulamin**",
+            "fileFormat": "pdf",
+            "url": "/media/documents/69c037ed002a5563f019-wyjazd-istebna-regulamin-3-.pdf"
+          }
+        ]
+      },
+      {
+        "__component": "section.contact-footer",
+        "heading": "Masz pytania?",
+        "contactText": "Napisz do nas: fundacja@maszt.org",
+        "motto": "Dołącz do naszej **załogi**!",
+        "shareLinks": [
+          "Facebook",
+          "X"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "69c03140003cd408667d",
+    "projectTitle": "MAS-ZT",
+    "projectSlug": "mas-zt",
+    "blocks": [
+      {
+        "__component": "section.funding-banner",
+        "content": "**Fundacja Maszt** w partnerstwie z **Urzędem Miasta Rybnika** realizuje projekt finansowany przez **Narodowy Instytut Wolności** w ramach programu **NOWEFIO**. Wysokość dotacji – **92 650,00 zł**.",
+        "images": [
+          {
+            "url": "/media/images/69c304ce0014a4c733e3-nowe-fio-fundacja.webp",
+            "alt": "Logo Narodowy Instytut Wolności"
+          },
+          {
+            "url": "/media/images/69c2fe850019fdc31a79-logo-polska-fundacja.png",
+            "alt": "Logo NOWEFIO"
+          }
+        ]
+      },
+      {
+        "__component": "section.full-image",
+        "image": {
+          "url": "/media/images/69c2a44a0017a6777604-fundacja-bg.jpg",
+          "alt": "MAS-ZT"
+        }
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "O projekcie",
+        "content": "**MAS-ZT** (Młodzi, Aktywni, Samorządni – Zmieniamy Teraźniejszość) ma na celu rozwijanie **kompetencji społecznych** i **obywatelskich** młodzieży oraz zwiększenie ich **zaangażowania** w życie lokalnej **społeczności**. W ramach projektu przewidziano **warsztaty**, **coaching** (dla **samorządów uczniowskich** pięciu szkół ponadpodstawowych), **konferencje** i spotkania sieciujące młodzież, a także budowę **sieci wsparcia** dla nauczycieli **edukacji obywatelskiej**. Ważnym elementem będzie **kampania** promująca **aktywność** młodzieży, prowadzona przez **wolontariuszy**."
+      },
+      {
+        "__component": "section.stats-highlight",
+        "timeline": "7.04.2025 – 31.07.2026 r.",
+        "targetGroupSize": "**85 osób**"
+      },
+      {
+        "__component": "section.actions-table",
+        "heading": "Zaplanowane działania",
+        "columns": [
+          "Działanie",
+          "Opis",
+          "Odbiorcy"
+        ],
+        "items": [
+          {
+            "action": "**Wzmacnianie samorządów szkolnych** szkół ponadpodstawowych",
+            "description": "Przygotowanie członków **zarządów uczniowskich** 5 szkół ponadpodstawowych do pełnienia swojej roli w najbliższej kadencji, a także danie im stabilne wsparcie przez cały rok szkolny. Organizacja **warsztatów** w okresie wakacji, podczas których młodzież wypracuje sobie plan działalności ich samorządu na kolejny rok. Na etapie realizacji, będą mogli korzystać z **10 godzin coachingu**, które mają pomóc im utrzymać **motywację** w realizacji planu.",
+            "recipients": "5 grup osób będących członkami **zarządów** swoich samorządów uczniowskich szkół ponadpodstawowych z terenu miasta Rybnika. Ilość osób: **22**.\nWarunek: nowo wybrany skład zarządu SU danej szkoły, którego kadencja trwa minimum do kwietnia **2026**."
+          },
+          {
+            "action": "**Budowanie infrastruktury społecznej** dla aktywnej młodzieży",
+            "description": "Składa się z kilku zadań:\n**Konferencja młodzieżowa** w czerwcu 2025 r.\n**Warsztaty** dla młodzieży rozwijające **kompetencje** komunikacyjne i społeczne oraz projektowe. Wrzesień ’25-maj 26′.\n**Spotkania sieci** samorządnej młodzieży od września ’25 do maja ’26.\n**Konferencja młodzieżowa** w czerwcu 2026 r.\nPodstrona z wykazem linków do publikacji, filmów, podcastów, które dotyczą **samorządności** i **partycypacji**.",
+            "recipients": "**75 osób** – **młodzieży** w wieku szkolnym (12-20 lat) – aktywistów, wolontariuszy, zarządów samorządów klasowych i szkolnych"
+          },
+          {
+            "action": "**Wspieranie wspierających**",
+            "description": "W ramach działania powstanie **sieć współpracy** nauczycieli **Edukacji Obywatelskiej**.",
+            "recipients": "**Nauczyciele edukacji obywatelskiej** (szkoły ponadpodstawowe) z terenu miasta Rybnik, powiatu rybnickiego, oraz powiatów ościennych: wodzisławskiego, raciborskiego, m. Żory. **10 osób**."
+          },
+          {
+            "action": "**Koalicja NGO** dla edukacji obywatelskiej",
+            "description": "Stworzenie bazy **NGOsów**, chcących wspierać proces **edukacji obywatelskiej** w szkołach (dana organizacja, przykładowe realizowane projekty, jakie obszary z podstawy programowej mogą wesprzeć, jakie działania z podstawy mogą pomóc zorganizować). Opublikowanie bazy danych **Koalicji** i jej promocja.",
+            "recipients": "**Organizacje pozarządowe**: min. **10**."
+          },
+          {
+            "action": "**Kampania promująca** aktywność młodzieży",
+            "description": "Promocja całego projektu. Informowanie **społeczności lokalnej**, o prowadzonych działaniach. Działanie ma być realizowane przez dwójkę **wolontariuszy długoterminowych**. W ramach kampanii mają pojawić się zdjęcia, posty, shorty (krótkie filmiki, 40-120sekund), filmy dłuższe (do 5 minut), a także film podsumowujący projekt (około 10 minut).",
+            "recipients": "Odbiorcami treści będą **beneficjenci** pozostałych działań, ale także **społeczność lokalna**, która trafi na materiały. Specyficznym beneficjentem – nie wliczanym w zakres beneficjentów projektu – będą **wolontariusze** realizujący działanie."
+          },
+          {
+            "action": "**Ewaluacja działań**",
+            "description": "Działanie skupia się na dokonaniu pełnej **ewaluacji**: zebraniu danych i wniosków ze wszystkich ankiet, analizie osiągniętych rezultatów. W ramach działania, chcemy przeprowadzić **wywiad focusowy** z wybranymi beneficjentami projektu.",
+            "recipients": "Oferent, partner, wybrani **beneficjenci** działań i usługobiorcy."
+          },
+          {
+            "action": "**Rozwój instytucjonalny**",
+            "description": "Działanie zostało zaplanowane na podstawie **Strategii Rozwoju Fundacji** na lata 2025-2026 z perspektywą na 2030.\nPrzede wszystkim opiera się na dwóch głównych celach strategicznych: Cel 4: Rozwój **infrastruktury i zasobów** Fundacji.\nCel 5: Budowanie trwałych struktur **wolontariatu**.",
+            "recipients": "**Zarząd Fundacji Maszt**; **wolontariusze** zaangażowani w działalność Fundacji (od długoterminowych do akcyjnych)."
+          }
+        ]
+      },
+      {
+        "__component": "section.full-image",
+        "image": {
+          "url": "/media/images/69c2a44a0017a6777604-fundacja-bg.jpg",
+          "alt": "MAS-ZT Galeria"
+        }
+      },
+      {
+        "__component": "section.recruitment-hub",
+        "heading": "Dołącz do nas – Aktualne rekrutacje",
+        "text": "Zapraszamy wszystkich zainteresowanych do śledzenia naszych działań i aktywnego **udziału**!",
+        "callsToAction": [
+          {
+            "title": "II **Kongres** Samorządów Uczniowskich",
+            "description": "12 czerwca **Młodzieżowa Rada Miasta Rybnika** zaprasza na wydarzenie.",
+            "linkText": "**Zapisz się**",
+            "linkUrl": "#"
+          },
+          {
+            "title": "**Wzmacnianie samorządów szkolnych**",
+            "description": "Ruszyły **zapisy** do działania dla szkół ponadpodstawowych.",
+            "linkText": "**Wypełnij formularz**",
+            "linkUrl": "/media/documents/69c3121c0015e03e2d4c-formularz-rekrutacyjny-wersja-do-wgladu.pdf"
+          }
+        ]
+      },
+      {
+        "__component": "section.downloads",
+        "heading": "Pliki i regulaminy",
+        "files": [
+          {
+            "fileName": "**Konferencja 2025** – regulamin",
+            "fileFormat": "pdf",
+            "url": "/media/documents/69c312710034f9939077-konferencja-2025-regulamin-1.pdf"
+          },
+          {
+            "fileName": "**Wzmacnianie samorządów szkolnych** – regulamin",
+            "fileFormat": "docx",
+            "url": "/media/documents/69c3124c0016d1060fab-wzmacnianie-samorzadow-szkolnych-regulamin.pdf"
+          }
+        ]
+      },
+      {
+        "__component": "section.contact-footer",
+        "heading": "Masz pytania?",
+        "contactText": "Więcej informacji o projekcie oraz relację z bieżących działań znajdziecie na **profilach społecznościowych** Fundacji Maszt.",
+        "motto": "**Zmieniamy Teraźniejszość** wspólnie z wami!",
+        "shareLinks": [
+          "Facebook",
+          "X"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "69c0314100051677f7c4",
+    "projectTitle": "Miłość na cztery łapy",
+    "projectSlug": "milosc-na-cztery-lapy",
+    "blocks": [
+      {
+        "__component": "section.full-image",
+        "image": {
+          "url": "/media/images/69c2a44a0017a6777604-fundacja-bg.jpg",
+          "alt": "Logo Miłość na cztery łapy"
+        }
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "O projekcie",
+        "content": "To akcja **charytatywna**, która ma promować **adopcję** zwierząt z **rybnickiego schroniska**! Przy jej okazji organizujemy **zbiórkę** środków finansowanych, dzięki której kupimy karmę, koce, miski i inne rzeczy potrzebne do opieki nad **bezdomnymi zwierzakami**.\n\nJak się odbywa? Przez cały luty zbieramy środki finansowe przez stronę internetową www.miloscnaczterylapy.pl – to specjalna strona! Dlaczego? Po pierwsze, aby na nią trafić... trzeba mieć **walentynkę**! Walentynki znajdują się u naszych partnerów – to 17 miejsc, instytucji i firm, które działają w **Rybniku** (m.in Cafe Bosko, Gardenia). W walentynce umieściliśmy **QR kod** proawdzący na stronę z **quizem**. Odpowiadając na pytania odnajdziesz... jedno ze **zwierząt**, które mogą do Ciebie pasować! Możesz zainteresować się adopcją lub wesprzeć zbiórkę **darowizną**."
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "Kto stoi za tą akcją?",
+        "content": "To... czwórka rybnickich **14-latków**! **Ósmoklasistów** ze Szkoły Podstawowej nr 28, którzy zgłosili się do nas samoistnie z pytaniem, czy pomożemy zrobić im coś dobrego. Dla nas, to najlepsza rzecz, jaka mogła nas spotkać."
+      },
+      {
+        "__component": "section.full-image",
+        "image": {
+          "url": "/media/images/69c2a44a0017a6777604-fundacja-bg.jpg",
+          "alt": "Wolontariusze Schronisko"
+        }
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "Sprawozdanie",
+        "content": "W ramach wspaniałej zbiórki udało się zebrać kwotę **4 379,22 zł**. Prowizja za przelewy wyniosła 212,51 zł, wydruk walentynek wyniósł 764,83 zł, usługi księgowe 200,00 zł, a zakup produktów 3 208,11 zł. Różnica pomiędzy zebranymi środkami a wydatkami: -6,23 zł, którą z przyjemnością pokryto ze środków własnych **Fundacji Maszt**."
+      },
+      {
+        "__component": "section.downloads",
+        "heading": "Pliki do pobrania",
+        "files": [
+          {
+            "fileName": "Sprawozdanie z akcji Miłość na cztery łapy",
+            "fileFormat": "pdf",
+            "url": "/media/documents/69c3163d0001f83c3025-sprawozdanie-z-akcji-milosc-na-cztery-lapy.pdf"
+          }
+        ]
+      },
+      {
+        "__component": "section.contact-footer",
+        "heading": "Wspieraj nas dalej!",
+        "contactText": "Dowiedz się o kolejnych akcjach na naszych **social mediach** lub skontaktuj z nami mailowo: fundacja@maszt.org",
+        "motto": "**Bezdomne zwierzęta** czekają na ciebie!",
+        "shareLinks": [
+          "Facebook",
+          "X"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "69c03141000c67cbbc6a",
+    "projectTitle": "Pierwsza Pomoc Przedpsychologiczna",
+    "projectSlug": "pierwsza-pomoc-przedpsychologiczna",
+    "blocks": [
+      {
+        "__component": "section.full-image",
+        "image": {
+          "url": "/media/images/69c2a44a0017a6777604-fundacja-bg.jpg",
+          "alt": "Pierwsza Pomoc przedPsychologiczna"
+        }
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "O projekcie",
+        "content": "„**Pierwsza Pomoc przedPsychologiczna**” to innowacyjny program realizowany przez **Fundację Maszt**, którego celem jest wspieranie **zdrowia psychicznego** młodzieży. Projekt skierowany jest do **uczniów** szkół ponadpodstawowych w **Rybniku** w wieku **15–19 lat** i jest całkowicie **bezpłatny**. Działania są współfinansowane przez **Miasto Rybnik**, a ich realizacja odbywa się w pierwszej połowie 2025 roku."
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "Dlaczego to ważne?",
+        "content": "Coraz więcej młodych ludzi zmaga się z problemami **emocjonalnymi**, **stresem** i trudnościami w relacjach z rówieśnikami. Niestety, brakuje **narzędzi**, które pomogłyby im radzić sobie z tymi wyzwaniami. Projekt „**Pierwsza Pomoc przedPsychologiczna**” wychodzi naprzeciw tym potrzebom, dając młodzieży umiejętności rozpoznawania objawów **stresu** u siebie i innych oraz **wspierania** swoich rówieśników.\n\nProgram opiera się na modelu opracowanym przez **UNICEF** i **WHO**, który wykorzystuje zasady „**Patrz, Słuchaj, Łącz**”. Uczestnicy zdobywają praktyczną **wiedzę i umiejętności**, które mogą wykorzystywać w codziennym życiu."
+      },
+      {
+        "__component": "section.call-to-action-list",
+        "heading": "Dla kogo?",
+        "intro": "Do udziału zapraszamy:",
+        "listHeading": "",
+        "items": [
+          "Osoby w wieku **15–19 lat**.",
+          "Mieszkające w **Rybniku** lub uczące się w szkołach ponadpodstawowych na terenie miasta.",
+          "Gotowe do udziału w **szkoleniu** i sesjach **mentoringowych**.",
+          "Osoby, które nie znajdują się w **kryzysie** zdrowia psychicznego."
+        ]
+      },
+      {
+        "__component": "section.actions-table",
+        "heading": "Harmonogram",
+        "columns": [
+          "Etap",
+          "Szczegóły"
+        ],
+        "items": [
+          {
+            "action": "1. **Rekrutacja**: 6–31 stycznia 2025 r.",
+            "description": "Zgłoszenia przyjmujemy przez **formularz online**.\nOsoby niepełnoletnie muszą później donieść **zgodę rodzica** lub opiekuna prawnego."
+          },
+          {
+            "action": "2. **Szkolenie**:",
+            "description": "**Termin**: 17–19 lutego 2025 r. (poniedziałek–środa), godz. 10:00–15:00.\n**Miejsce**: Siedziba Fundacji Maszt lub wybrana szkoła na terenie Rybnika (szczegóły podamy uczestnikom).\n**Prowadzący**: Doświadczony **psycholog i psychoterapeuta** z kwalifikacjami do pracy z młodzieżą."
+          },
+          {
+            "action": "3. **Sesje wsparcia i mentoringu**:",
+            "description": "6 spotkań w okresie od marca do czerwca 2025 r.\nSesje co dwa tygodnie, trwające 90 minut każda.\nSpotkania pozwolą uczestnikom rozwijać zdobyte **umiejętności** i omówić napotkane **trudności**."
+          },
+          {
+            "action": "4. **Ewaluacja**:",
+            "description": "Po zakończeniu programu przeprowadzimy **wywiady focusowe** z uczestnikami, które pozwolą ocenić **efekty** projektu."
+          }
+        ]
+      },
+      {
+        "__component": "section.benefits",
+        "heading": "Korzyści dla uczestników",
+        "items": [
+          "Nauczysz się, jak rozpoznawać objawy **stresu** u siebie i rówieśników.",
+          "Poznasz techniki **wspierania innych** w duchu empatii i zrozumienia.",
+          "Zdobędziesz **umiejętności**, które będą przydatne w codziennym życiu oraz budowaniu zdrowych **relacji**.",
+          "Zostaniesz częścią lokalnej **sieci wsparcia** rówieśniczego."
+        ]
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "Finansowanie",
+        "content": "Projekt jest realizowany dzięki wsparciu finansowemu **Miasta Rybnik** oraz wkładowi własnemu **Fundacji Maszt**. Udział w programie jest w 100% **darmowy** dla uczestników."
+      },
+      {
+        "__component": "section.recruitment-hub",
+        "heading": "Jak się zgłosić?",
+        "text": "1. Wypełnij **formularz rekrutacyjny** dostępny tutaj.\n2. Poczekaj na potwierdzenie zgłoszenia. Wyniki rekrutacji ogłosimy do **5 lutego 2025 r.**",
+        "callsToAction": [
+          {
+            "title": "**Zgłoszenie**",
+            "description": "Wypełnij formularz na wyjazd",
+            "linkText": "**Wypełnij formularz**",
+            "linkUrl": "#"
+          }
+        ]
+      },
+      {
+        "__component": "section.downloads",
+        "heading": "Pliki do pobrania",
+        "files": [
+          {
+            "fileName": "**Rekomendacje** pierwsza pomoc przedpsychologiczna",
+            "fileFormat": "pdf",
+            "url": "/media/documents/69c3170c003ddf00da69-rekomendacje-pierwsza-pomoc-przedpsychologiczna.pdf"
+          },
+          {
+            "fileName": "**Regulamin** udziału i rekrutacji w projekcie pierwsza pomoc przedpsychologiczna",
+            "fileFormat": "pdf",
+            "url": "/media/documents/69c3172e002f4bd8d4b2-regulamin-udzialu-i-rekrutacji-w-projekcie-pierwsza-pomoc-przedpsychologiczna-1.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "69c0314100133388ac22",
+    "projectTitle": "Rodzinny restart",
+    "projectSlug": "rodzinny-restart",
+    "blocks": [
+      {
+        "__component": "section.full-image",
+        "image": {
+          "url": "/media/images/69c2a44a0017a6777604-fundacja-bg.jpg",
+          "alt": "Rodzinny restart"
+        }
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "O projekcie",
+        "content": "**Fundacja Maszt** zaprasza **rodziców** z **Rybnika** do udziału w projekcie „**Rodzinny restart**”. To nowatorska inicjatywa skierowana do rodziców, którzy chcą skuteczniej radzić sobie ze **stresem** oraz wielokrotnie budować **zdrowe relacje** w swoich rodzinach."
+      },
+      {
+        "__component": "section.call-to-action-list",
+        "heading": "Dla kogo jest ten projekt?",
+        "intro": "Projekt przeznaczony jest dla pełnoletnich **rodziców/opiekunów**:",
+        "listHeading": "",
+        "items": [
+          "Mieszkających lub pracujących w mieście **Rybniku**,",
+          "Posiadających **dzieci w wieku 10-18 lat** z rozpoznanymi i zdiagnozowanymi **problemami emocjonalnymi** (**depresja**, **lęk**)."
+        ]
+      },
+      {
+        "__component": "section.actions-table",
+        "heading": "Co oferujemy?",
+        "columns": [
+          "Moduł",
+          "Szczegóły",
+          "Koszt"
+        ],
+        "items": [
+          {
+            "action": "**Warsztaty** redukcji stresu",
+            "description": "4 spotkania (2h). Nauka **mindfulness**, praca z codziennym stresem relacyjnym z dzieckiem oparta na terapii i nurcie naukowym **ACT**.",
+            "recipients": "35 zł - wpisowe"
+          },
+          {
+            "action": "**Trening wychowawczy**",
+            "description": "10 spotkań (2h). Stawianie granic, **Good Enough Parenting**, rozwiązywanie wewnętrznych konfliktów we wczesnej terapii.",
+            "recipients": "140 zł - całość"
+          }
+        ]
+      },
+      {
+        "__component": "section.full-image",
+        "image": {
+          "url": "/media/images/69c2a44a0017a6777604-fundacja-bg.jpg",
+          "alt": "Rodzice Warsztaty"
+        }
+      },
+      {
+        "__component": "section.benefits",
+        "heading": "Dlaczego warto?",
+        "items": [
+          "Szansa na obiektywnie lepsze **zrozumienie** swojego dziecka,",
+          "Mierzalna poprawa **komunikacji** w obrębie bliskiej rodziny,",
+          "Praktyczne **narzędzia** i kwestionariusze wiedzy kompetencyjnej.",
+          "Współtworzenie wspierającej **sieci kontaktów** rodziców."
+        ]
+      },
+      {
+        "__component": "section.downloads",
+        "heading": "Warunki uczestnictwa (Regulamin)",
+        "files": [
+          {
+            "fileName": "**Regulamin** udziału w projekcie Restart",
+            "fileFormat": "pdf",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "__component": "section.funding-info",
+        "content": "Dzięki wsparciu oraz dofinansowaniu ze środków **Miasta Rybnik** projekt objęty jest ścisłą współpracą z fundacją publiczną."
+      },
+      {
+        "__component": "section.contact-footer",
+        "heading": "Masz pytania?",
+        "contactText": "Liczba miejsc w edycji jest ograniczona. Skontaktuj się z nami poprzez fanpage na FB lub wyślij CV na fundacja@maszt.org.",
+        "motto": "Zainwestuj w **spokój** swojego domu i **restart** relacji!",
+        "shareLinks": [
+          "Facebook",
+          "X"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "69c298bc0033cab30cd4",
+    "projectTitle": "Godomy o edukacji. Rybnicka debata o samorządności uczniów.",
+    "projectSlug": "godomy-o-edukacji",
+    "blocks": [
+      {
+        "__component": "section.funding-banner",
+        "content": "Projekt sfinansowano ze srodkow Narodowego Instytutu Wolnosci - Centrum Rozwoju Spoleczenstwa Obywatelskiego w ramach Programu **NOWEFIO** na lata 2021 - 2030. Umowa nr 5/2024/SL **Slaskie Lokalnie**.",
+        "images": [
+          {
+            "url": "/media/images/69c30c7c0013eb4d5553-sl-logotyp.webp",
+            "alt": "Logo Slaskie Lokalnie"
+          },
+          {
+            "url": "/media/images/69c30bdf000859eb456a-godomy-fundacja.webp",
+            "alt": "Logo NIW NOWEFIO"
+          }
+        ]
+      },
+      {
+        "__component": "section.hero",
+        "subtitle": null,
+        "introText": "Projekt ma zwiększyć **uczestnictwo** uczniów szkół ponadpodstawowych w **Rybniku** w decyzje dotyczące ich edukacji. Badania w Rybniku pokazały problem niskiego uczestniczenia **młodzieży** w życiu szkolnym i społecznym. Tylko **26,5%** uczniów czuje się **zaangażowanych** w decyzje szkolne, a większość widzi uczestnictwo w szkole jako stratę czasu, rzecz niemożliwą lub wyłącznie pozorną."
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "Co robimy?",
+        "content": "Chcemy to zmieniać! Organizujemy debatę metodą \"**world cafe**\", pozwalając uczniom, nauczycielom, dyrektorom szkół oraz lokalnym aktywistom wspólnie rozmawiać i opracować konkretne propozycje **zmian**. W działania włączamy osoby z **niepełnosprawnością**, **neuroróżnorodne** oraz z doświadczeniem **migranckim**. Szukamy i szkolimy **wolontariuszy**, którzy będą pomagać zorganizować debatę, promujemy wydarzenie oraz opracujemy **raport** z rekomendacjami.\n\nChcemy zwiększyć poczucie **wpływu** uczniów na życie szkolne oraz poprawiać jakość **dialogu** między uczniami a administracją szkolną, **Młodzieżową Radą Miasta** oraz Urzędem Miasta.\n\nPartnerem projektu jest Młodzieżowa Rada Miasta Rybnika. Wydarzenie ma zapoczątkować cykl działań mających na celu zwiększenie **partycypacji** młodzieży w obszarze zarządzania edukacją w mieście Rybnik."
+      },
+      {
+        "__component": "section.downloads-fancy",
+        "heading": "Dokumenty",
+        "intro": "Pobierz **materiały** związane z projektem.",
+        "files": [
+          {
+            "title": "Raport z debaty",
+            "format": "PDF",
+            "url": "/pobrane_pliki/raport-z-debaty.pdf"
+          },
+          {
+            "title": "Pakiet dokumentów uczestnika",
+            "format": "DOCX",
+            "url": "/pobrane_pliki/pakiet-uczestnika.docx"
+          },
+          {
+            "title": "Regulamin eventu",
+            "format": "DOCX",
+            "url": "/pobrane_pliki/regulamin-eventu-1.docx"
+          }
+        ]
+      },
+      {
+        "__component": "section.stats-highlight",
+        "timeline": "2024",
+        "targetGroupSize": "**Uczniowie** szkół ponadpodstawowych"
+      },
+      {
+        "__component": "section.contact-footer",
+        "heading": "Masz pytania?\nOdezwij się do nas.",
+        "contactText": "fundacja@maszt.org\n+48 792 220 095",
+        "motto": "Budujemy infrastrukturę społeczną, by ludzie doświadczali bycia **wartością**.",
+        "shareLinks": [
+          "Facebook",
+          "X (Twitter)"
+        ]
+      }
+    ]
+  }
+]

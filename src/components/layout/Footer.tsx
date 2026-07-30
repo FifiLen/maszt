@@ -65,11 +65,11 @@ export default function Footer() {
         <div className="py-10 border-t border-[#e8e4df]/20 flex flex-col space-y-4">
           <h3 className="font-mono text-xs uppercase tracking-widest opacity-50 mb-2">Dokumenty i Prawo</h3>
           <div className="flex flex-wrap gap-x-8 gap-y-4 text-sm">
-            <a target="_blank" rel="noopener noreferrer" href="https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31c1100299ec86a35/view?project=69b30650001b6b60508c" className="hover:text-white transition-colors underline underline-offset-4 opacity-80 hover:opacity-100">Statut Fundacji</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31d36002ab0c39092/view?project=69b30650001b6b60508c" className="hover:text-white transition-colors underline underline-offset-4 opacity-80 hover:opacity-100">Sprawozdanie 2024</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31e3d0019550634ef/view?project=69b30650001b6b60508c" className="hover:text-white transition-colors underline underline-offset-4 opacity-80 hover:opacity-100">Rozliczenie 2024</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31e0c002d99c72101/view?project=69b30650001b6b60508c" className="hover:text-white transition-colors underline underline-offset-4 opacity-80 hover:opacity-100">Polityka ochrony dzieci</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c31c670013f56a48be/view?project=69b30650001b6b60508c" className="hover:text-white transition-colors underline underline-offset-4 opacity-80 hover:opacity-100">RODO</a>
+            <a target="_blank" rel="noopener noreferrer" href="/media/documents/69c31c1100299ec86a35-statut-fundacja-maszt-12.07.2024.pdf" className="hover:text-white transition-colors underline underline-offset-4 opacity-80 hover:opacity-100">Statut Fundacji</a>
+            <a target="_blank" rel="noopener noreferrer" href="/media/documents/69c31d36002ab0c39092-sprawozdanie-z-dzialalnosci-fundacji-2024-compressed.pdf" className="hover:text-white transition-colors underline underline-offset-4 opacity-80 hover:opacity-100">Sprawozdanie 2024</a>
+            <a target="_blank" rel="noopener noreferrer" href="/media/documents/69c31e3d0019550634ef-rozliczenie-finansowe-2024.pdf" className="hover:text-white transition-colors underline underline-offset-4 opacity-80 hover:opacity-100">Rozliczenie 2024</a>
+            <a target="_blank" rel="noopener noreferrer" href="/media/documents/69c31e0c002d99c72101-polityka-ochrony-dzieci.pdf" className="hover:text-white transition-colors underline underline-offset-4 opacity-80 hover:opacity-100">Polityka ochrony dzieci</a>
+            <a target="_blank" rel="noopener noreferrer" href="/media/documents/69c31c670013f56a48be-rodo-3-.pdf" className="hover:text-white transition-colors underline underline-offset-4 opacity-80 hover:opacity-100">RODO</a>
           </div>
         </div> 
         */}

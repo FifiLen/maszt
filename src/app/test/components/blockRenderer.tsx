@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import ImageGalleryBlock from './image-gallery-clock';
 import InteractiveTableBlock from './interactive-table-block';
 import InteractiveFeaturesBlock from './interactive-features-block';
@@ -134,6 +134,146 @@ function DownloadsBlock({ data }: { data: any }) {
         </div>
       </div>
     </div>
+  );
+}
+
+type ResourceKind = "publication" | "video" | "podcast";
+
+type ResourceItem = {
+  title: string;
+  type: ResourceKind;
+  source?: string;
+  url: string;
+};
+
+type ResourcesLibraryData = {
+  heading?: string;
+  id?: string;
+  intro?: string;
+  items?: ResourceItem[];
+};
+
+const resourceFilters: Array<{
+  value: "all" | ResourceKind;
+  label: string;
+}> = [
+  { value: "all", label: "Wszystkie" },
+  { value: "publication", label: "Publikacje" },
+  { value: "video", label: "Filmy" },
+  { value: "podcast", label: "Podcasty" },
+];
+
+const resourceKindLabels: Record<ResourceKind, string> = {
+  publication: "Publikacja",
+  video: "Film",
+  podcast: "Podcast",
+};
+
+function ResourcesLibraryBlock({ data }: { data: ResourcesLibraryData }) {
+  const [activeFilter, setActiveFilter] = useState<"all" | ResourceKind>("all");
+  const items: ResourceItem[] = Array.isArray(data.items) ? data.items : [];
+
+  const filteredItems =
+    activeFilter === "all"
+      ? items
+      : items.filter((item) => item.type === activeFilter);
+
+  if (items.length === 0) return null;
+
+  return (
+    <section
+      id={data.id || "materialy"}
+      className="w-full scroll-mt-24 py-24 text-maszt-green lg:py-36"
+    >
+      <div className="grid w-full grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-10 lg:px-10">
+        <div className="lg:col-start-2 lg:col-span-10">
+          <span className="mb-4 block font-mono text-[10px] uppercase tracking-widest opacity-50 md:text-xs">
+            Biblioteka wiedzy
+          </span>
+          <h3 className="max-w-full font-heading text-4xl leading-[0.9] uppercase tracking-tighter break-words hyphens-auto md:text-5xl lg:text-6xl">
+            <FormattedText text={data.heading} />
+          </h3>
+        </div>
+
+        <div className="lg:col-start-7 lg:col-span-5">
+          {data.intro && (
+            <p className="max-w-2xl font-sans text-lg leading-relaxed opacity-80 md:text-xl">
+              <FormattedText text={data.intro} />
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div className="mt-14 px-6 lg:mt-20 lg:px-10">
+        <div
+          className="flex flex-wrap gap-x-7 gap-y-3 border-y border-maszt-green/25 py-4"
+          aria-label="Filtruj materiały"
+        >
+          {resourceFilters.map((filter) => {
+            const count =
+              filter.value === "all"
+                ? items.length
+                : items.filter((item) => item.type === filter.value).length;
+            const isActive = activeFilter === filter.value;
+
+            return (
+              <button
+                key={filter.value}
+                type="button"
+                aria-pressed={isActive}
+                onClick={() => setActiveFilter(filter.value)}
+                className={`group flex items-baseline gap-2 border-b-2 py-2 font-mono text-xs uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 ${
+                  isActive
+                    ? "border-maszt-green"
+                    : "border-transparent opacity-55 hover:border-maszt-green/40 hover:opacity-100"
+                }`}
+              >
+                {filter.label}
+                <span className="text-[9px] opacity-60">{count}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="flex flex-col" aria-live="polite">
+          {filteredItems.map((item, index) => (
+            <a
+              key={item.url}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group grid grid-cols-12 items-center gap-4 border-b border-maszt-green/20 py-6 transition-colors duration-300 hover:bg-maszt-green hover:text-maszt-sand focus-visible:bg-maszt-green focus-visible:text-maszt-sand focus-visible:outline-none md:gap-6 md:px-4 lg:py-8"
+            >
+              <span className="col-span-2 font-mono text-[10px] tracking-widest opacity-50 md:col-span-1 md:text-xs">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              <span className="col-span-8 flex min-w-0 flex-col gap-1 md:col-span-7">
+                <span className="font-heading text-xl leading-tight tracking-tight md:text-2xl lg:text-3xl">
+                  {item.title}
+                </span>
+                {item.source && (
+                  <span className="font-mono text-[10px] uppercase tracking-widest opacity-55 md:text-xs">
+                    {item.source}
+                  </span>
+                )}
+              </span>
+
+              <span className="hidden font-mono text-[10px] uppercase tracking-widest opacity-60 md:col-span-2 md:block md:text-xs">
+                {resourceKindLabels[item.type]}
+              </span>
+
+              <span
+                className="col-span-2 justify-self-end text-2xl transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 md:col-span-2"
+                aria-hidden="true"
+              >
+                ↗
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -415,6 +555,7 @@ const componentMap: Record<string, React.ComponentType<any>> = {
   'section.funding-info': FundingBlock,
   'section.funding-banner': FundingBannerBlock, // <-- NOWOŚĆ
   'section.downloads': DownloadsBlock,
+  'section.resources-library': ResourcesLibraryBlock,
   'section.project-footer': FundingBlock,
   'section.stats-highlight': StatsBlock,
   'section.actions-table': InteractiveTableBlock,

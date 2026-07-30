@@ -1,31 +1,23 @@
-import { databases } from "@/lib/appwrite";
+import { getProjects } from "@/lib/projects";
 import AboutSection from "./test/components/about-section";
 import ImageDivider from "./test/components/image-divider";
 import ProjectsSection from "./test/components/projects-section";
 
-const page = async () => {
-  // --- POBIERANIE DANYCH Z APPWRITE ---
-  let projectsMapData: any[] = [];
-  try {
-    const response = await databases.listDocuments(
-      "69c02ef9002fc00e846e", 
-      "projects"
+const page = () => {
+  const projectsMapData = getProjects().map((project) => {
+    const textBlock = project.blocks.find(
+      (block) => block.__component === "section.text-block",
     );
-    projectsMapData = response.documents.map((doc: any) => {
-      const blocks = JSON.parse(doc.contentBlocks || "[]");
-      const textBlock = blocks.find((b: any) => b.__component === "section.text-block");
-      const imgBlock = blocks.find((b: any) => b.__component === "section.full-image" || b.__component === "section.image-portal");
-      
-      return {
-        slug: doc.projectSlug,
-        tytul: doc.projectTitle,
-        opis: textBlock ? textBlock.content : "Brak opisu",
-        image: imgBlock ? (imgBlock.image?.url || imgBlock.images?.[0]?.url) : "/test-bg.jpg"
-      };
-    });
-  } catch (err) {
-    console.error("Błąd pobierania projektów z bazy:", err);
-  }
+
+    return {
+      slug: project.projectSlug,
+      tytul: project.projectTitle,
+      opis:
+        typeof textBlock?.content === "string"
+          ? textBlock.content
+          : "Brak opisu",
+    };
+  });
 
   return (
     <div className="flex flex-col w-full relative">
@@ -33,9 +25,9 @@ const page = async () => {
       {/* Sekcja Hero - Nagłówek wycentrowany na dole ekranu */}
       <div className="w-full relative h-screen flex flex-col justify-end items-center px-6 lg:px-10 pb-16 lg:pb-24 overflow-hidden text-center">
          
-         {/* Zdjęcie tła z Appwrite */}
+         {/* Lokalne zdjęcie tła, publikowane przez CDN Vercela. */}
          <img 
-           src="https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c325d60030fa5b980a/view?project=69b30650001b6b60508c&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbklkIjoiNjljMzI1ZGVhZTcxZmYwNDVkYTYiLCJyZXNvdXJjZUlkIjoiNjljMDMzNTEwMDE2M2UyOWRiNTQ6NjljMzI1ZDYwMDMwZmE1Yjk4MGEiLCJyZXNvdXJjZVR5cGUiOiJmaWxlcyIsInJlc291cmNlSW50ZXJuYWxJZCI6IjY2MzEyOjI0IiwiaWF0IjoxNzc0Mzk2ODk0fQ.aX-rRBj43AhROotvU9by00cEFNGjsbomiVA0hWe4bGA"
+           src="/media/images/69c325d60030fa5b980a-amine-hoov-uiz1w4sehd8-unsplash.jpg"
            alt="Tło Fundacji Maszt"
            className="absolute inset-0 w-full h-full object-cover z-0"
          />
@@ -53,7 +45,7 @@ const page = async () => {
       <div className="z-20 relative bg-[#e8e4df]">
        
         <ProjectsSection projectsData={projectsMapData} /> 
-        <ImageDivider imageUrl="https://fra.cloud.appwrite.io/v1/storage/buckets/69c0335100163e29db54/files/69c2a44a0017a6777604/view?project=69b30650001b6b60508c" altText="Widok na fundację" />
+        <ImageDivider imageUrl="/media/images/69c2a44a0017a6777604-fundacja-bg.jpg" altText="Widok na fundację" />
         <AboutSection />
          
       </div>

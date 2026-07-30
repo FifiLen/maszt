@@ -1,31 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
-import { databases } from '@/lib/appwrite';
+import { getProjects } from '@/lib/projects';
 
-export const revalidate = 60; // Opcjonalnie: odświeżanie cache'u co 60 sekund
-
-export default async function ProjektyPage() {
-  // --- POBIERANIE DANYCH Z APPWRITE ---
-  let projectsData: any[] = [];
-  try {
-    const response = await databases.listDocuments(
-      "69c02ef9002fc00e846e", 
-      "projects"
+export default function ProjektyPage() {
+  const projectsData = getProjects().map((project) => {
+    const textBlock = project.blocks.find(
+      (block) => block.__component === "section.text-block",
     );
-    projectsData = response.documents.map((doc: any) => {
-      const blocks = JSON.parse(doc.contentBlocks || "[]");
-      const textBlock = blocks.find((b: any) => b.__component === "section.text-block");
-      
-      return {
-        slug: doc.projectSlug,
-        tytul: doc.projectTitle,
-        // Proste usuwanie znaków "**" z opisu, żeby na zwykłej liście wyświetlił się czysty tekst
-        opis: textBlock ? textBlock.content.replace(/\*\*/g, '') : "Brak opisu",
-      };
-    });
-  } catch (err) {
-    console.error("Błąd pobierania projektów z bazy:", err);
-  }
+
+    return {
+      slug: project.projectSlug,
+      tytul: project.projectTitle,
+      opis:
+        typeof textBlock?.content === "string"
+          ? textBlock.content.replace(/\*\*/g, "")
+          : "Brak opisu",
+    };
+  });
 
   return (
     <main className="min-h-screen bg-[#e8e4df] text-[#3ead8f] pt-32 lg:pt-48 px-6 lg:px-10 pb-24">
