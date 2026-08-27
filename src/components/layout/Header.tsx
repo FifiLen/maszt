@@ -10,6 +10,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 const projectLinks = [
+  { href: '/projekty/young-minds-real-change', label: 'Young Minds, Real Change' },
   { href: '/projekty/godomy-o-edukacji', label: 'Godomy o edukacji' },
   { href: '/projekty/rodzinny-restart', label: 'Rodzinny restart' },
   { href: '/projekty/pierwsza-pomoc-przedpsychologiczna', label: 'Pierwsza Pomoc Przedpsychologiczna' },

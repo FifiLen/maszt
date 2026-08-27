@@ -36,7 +36,7 @@ export function FormattedText({ text }: { text?: string }) {
   if (!text) return null;
 
   const parts = text.split(
-    /(\*\*.*?\*\*|\[[^\]]+\]\((?:https?:\/\/|\/)[^)]+\)|\n)/g,
+    /(\*\*.*?\*\*|\[[^\]]+\]\((?:https?:\/\/|\/|mailto:)[^)]+\)|\n)/g,
   );
 
   return (
@@ -47,7 +47,7 @@ export function FormattedText({ text }: { text?: string }) {
         }
 
         const linkMatch = part.match(
-          /^\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)]+)\)$/,
+          /^\[([^\]]+)\]\(((?:https?:\/\/|\/|mailto:)[^)]+)\)$/,
         );
 
         if (linkMatch) {

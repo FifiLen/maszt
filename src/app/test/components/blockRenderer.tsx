@@ -401,19 +401,28 @@ function RecruitmentHubBlock({ data }: { data: any }) {
           </p>
         )}
         <div className={`w-full mt-6 ${isSingleCta ? 'flex justify-center' : 'grid grid-cols-1 sm:grid-cols-2 gap-6'}`}>
-          {data.callsToAction.map((cta: any, i: number) => (
-            <div key={i} className={`flex flex-col items-center text-center gap-4 bg-[#3ead8f]/5 p-8 rounded-2xl border border-[#3ead8f]/10 ${isSingleCta ? 'w-full max-w-2xl' : 'w-full'}`}>
-              <h4 className="font-heading text-2xl md:text-3xl uppercase leading-[1] tracking-tighter">
-                <FormattedText text={cta.title} />
-              </h4>
-              <p className="font-sans text-sm md:text-base leading-relaxed opacity-80">
-                <FormattedText text={cta.description} />
-              </p>
-              <a href={cta.linkUrl} className="mt-auto font-mono text-xs uppercase font-medium tracking-wider bg-[#3ead8f] text-[#e8e4df] px-6 py-2.5 rounded-full hover:bg-opacity-80 transition-colors">
-                 <FormattedText text={cta.linkText} /> ↗
-              </a>
-            </div>
-          ))}
+          {data.callsToAction.map((cta: any, i: number) => {
+            const isExternal = typeof cta.linkUrl === "string" && cta.linkUrl.startsWith("http");
+
+            return (
+              <div key={i} className={`flex flex-col items-center text-center gap-4 bg-[#3ead8f]/5 p-8 rounded-2xl border border-[#3ead8f]/10 ${isSingleCta ? 'w-full max-w-2xl' : 'w-full'}`}>
+                <h4 className="font-heading text-2xl md:text-3xl uppercase leading-[1] tracking-tighter">
+                  <FormattedText text={cta.title} />
+                </h4>
+                <p className="font-sans text-sm md:text-base leading-relaxed opacity-80">
+                  <FormattedText text={cta.description} />
+                </p>
+                <a
+                  href={cta.linkUrl}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  className="mt-auto font-mono text-xs uppercase font-medium tracking-wider bg-[#3ead8f] text-[#e8e4df] px-6 py-2.5 rounded-full hover:bg-opacity-80 transition-colors"
+                >
+                  <FormattedText text={cta.linkText} /> ↗
+                </a>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

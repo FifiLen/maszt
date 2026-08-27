@@ -641,5 +641,94 @@
         ]
       }
     ]
+  },
+  {
+    "id": "young-minds-real-change-2026",
+    "projectTitle": "Young Minds, Real Change",
+    "projectSlug": "young-minds-real-change",
+    "blocks": [
+      {
+        "__component": "section.funding-banner",
+        "content": "Projekt **Young Minds, Real Change** jest dofinansowany ze środków budżetu państwa, przyznanych przez **Ministra Edukacji** w ramach programu **Kompas Młodego Obywatela**, moduł „Zdrowie i Klimat”.",
+        "images": [
+          {
+            "url": "/media/images/young-minds-real-change-ministerstwo-edukacji.png",
+            "alt": "Logo Ministra Edukacji"
+          }
+        ]
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "Dla młodych. Z ich perspektywą.",
+        "content": "**Young Minds, Real Change** to projekt dla młodych osób uczących się w rybnickich szkołach. Rozmawiamy o zdrowiu praktycznie, bez moralizowania i straszenia — w oparciu o wiedzę, doświadczenie specjalistów oraz perspektywę samych młodych ludzi.\n\nDziałamy wokół zdrowia **psychicznego i fizycznego**, bezpieczeństwa, relacji, bezpiecznego korzystania z nowych technologii oraz budowania zdrowych społeczności wśród młodzieży. Udział we wszystkich działaniach projektu jest **bezpłatny**."
+      },
+      {
+        "__component": "section.stats-highlight",
+        "timeline": "1.06–31.12.2026",
+        "targetGroupSize": "Uczniowie i uczennice **rybnickich szkół**"
+      },
+      {
+        "__component": "section.features",
+        "heading": "Co robimy?",
+        "subheading": "Pięć działań dla zdrowia młodych",
+        "items": [
+          {
+            "title": "Szkolne audyty zdrowia",
+            "description": "Zespoły uczniowskie przyglądają się zdrowiu i klimatowi swojej szkoły: zbierają opinie, analizują potrzeby, przygotowują wnioski oraz rekomendacje dla społeczności szkolnej."
+          },
+          {
+            "title": "Pierwsza pomoc przedpsychologiczna",
+            "description": "Młodzież poznaje zasady bezpiecznego reagowania w kryzysie, aktywnego słuchania oraz kierowania rówieśników do odpowiednich osób i instytucji. Szkolenie trwa 15 godzin, a udział w co najmniej 10 godzinach pozwala otrzymać zaświadczenie."
+          },
+          {
+            "title": "Górskie wyjazdy — Szlak dobrostanu",
+            "description": "Jednodniowe wyjazdy łączą ruch, odpoczynek i bycie razem z tematami uważności, higieny cyfrowej, profilaktyki e-hazardu oraz zdrowia społecznego."
+          },
+          {
+            "title": "Konkurs graficzny",
+            "description": "Młode osoby przygotowują prace graficzne o zdrowiu psychicznym, fizycznym, społecznym lub cyfrowym — pokazując temat własnym językiem i z własnej perspektywy."
+          },
+          {
+            "title": "Festiwal Zdrowia",
+            "description": "9 i 10 listopada 2026 roku w Zabytkowej Kopalni Ignacy młodzież spotka się ze specjalistami podczas warsztatów, rozmów i równoległych aktywności."
+          }
+        ]
+      },
+      {
+        "__component": "section.recruitment-hub",
+        "heading": "Zapisz się",
+        "text": "Możesz już zgłosić się na górskie wyjazdy **Szlak dobrostanu** albo do konkursu graficznego. Szczegóły dotyczące pozostałych działań będą przekazywane przez Fundację i szkoły.",
+        "callsToAction": [
+          {
+            "title": "Szlak dobrostanu",
+            "description": "Jednodniowe górskie wyjazdy dla młodzieży: 19.09, 3.10 i 14.11.2026 r.",
+            "linkText": "Formularz zapisów",
+            "linkUrl": "https://forms.cloud.microsoft/e/ydExZKRFnC"
+          },
+          {
+            "title": "Konkurs graficzny",
+            "description": "Pokaż zdrowie z własnej perspektywy i zgłoś jedną autorską pracę cyfrową.",
+            "linkText": "Formularz zgłoszeń",
+            "linkUrl": "https://forms.cloud.microsoft/e/0WV4SYjW1m"
+          }
+        ]
+      },
+      {
+        "__component": "section.downloads",
+        "heading": "Dokumenty projektu",
+        "files": [
+          {
+            "fileName": "Regulamin rekrutacji i udziału w projekcie Young Minds, Real Change",
+            "fileFormat": "PDF",
+            "url": "/media/documents/young-minds-real-change-regulamin-zalaczniki.pdf"
+          }
+        ]
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "Masz pytania?",
+        "content": "Napisz do nas: [kompas@maszt.org](mailto:kompas@maszt.org)."
+      }
+    ]
   }
 ]
