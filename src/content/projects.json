@@ -1,5 +1,61 @@
 [
   {
+    "id": "biegne-dla-zdrowej-glowy",
+    "projectTitle": "Biegnę dla zdrowej głowy",
+    "projectSlug": "biegne-dla-zdrowej-glowy",
+    "blocks": [
+      {
+        "__component": "section.funding-banner",
+        "content": "Projekt sfinansowany przez Fundację PKO Banku Polskiego.",
+        "image": {
+          "url": "/media/images/pko-fundacja-uz-rgb.jpg",
+          "alt": "Fundacja PKO Banku Polskiego"
+        }
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "O projekcie",
+        "content": "„Biegnę dla zdrowej głowy” – rozwijamy kompetencje młodzieżowych wolontariuszy."
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "Jak wspierać rówieśników?",
+        "content": "Jak wspierać rówieśnika, który przeżywa trudną sytuację? Co powiedzieć, kiedy nie znamy rozwiązania jego problemu? Gdzie kończy się rola osoby wspierającej, a zaczyna potrzeba zaangażowania dorosłego lub specjalisty? I wreszcie – jak pomagać innym, nie zapominając przy tym o własnym dobrostanie?\n\nNa te pytania odpowiadamy w projekcie „Biegnę dla zdrowej głowy – Fundacja Maszt”. Projekt jest skierowany do **20 młodzieżowych wolontariuszy i wolontariuszek**, którzy wcześniej ukończyli podstawowe szkolenie z zakresu first psychological aid (PFA) oparte na międzynarodowym programie UNICEF. Tym razem skupiamy się na pogłębieniu ich kompetencji poprzez praktykę, pracę na przypadkach i symulacjach."
+      },
+      {
+        "__component": "section.benefits",
+        "heading": "Podczas szkolenia uczestnicy ćwiczą m.in.",
+        "items": [
+          "prowadzenie wspierających rozmów z rówieśnikami,",
+          "reagowanie w sytuacjach silnych emocji, stresu, choroby czy osamotnienia,",
+          "rozpoznawanie granic własnej roli,",
+          "podejmowanie decyzji, kiedy potrzebna jest pomoc osoby dorosłej lub specjalisty,",
+          "bezpieczne kierowanie do dalszego wsparcia,",
+          "dbanie o własne emocje, granice i regenerację po trudnych rozmowach."
+        ]
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "Wyjazd do Wisły",
+        "content": "Centralnym punktem projektu jest **4-dniowy wyjazd szkoleniowo-rozwojowy do Wisły**, realizowany w dniach **6–9 października 2026 r.** W jego trakcie odbywa się pogłębiony trening PFA, zajęcia dotyczące self-care i odporności, a także działania integrujące grupę. To także okazja do budowania zespołu młodych osób, które mogą wzajemnie wspierać się w swoich późniejszych działaniach wolontariackich."
+      },
+      {
+        "__component": "section.benefits",
+        "heading": "Projekt w liczbach",
+        "items": [
+          "**20** młodzieżowych wolontariuszy i wolontariuszek",
+          "**4 dni** wyjazdu szkoleniowo-rozwojowego",
+          "**25 godzin** programu szkoleniowego i rozwojowego"
+        ]
+      },
+      {
+        "__component": "section.text-block",
+        "heading": "Realizacja i finansowanie",
+        "content": "Projekt realizowany jest w okresie **1 września – 18 października 2026 r.**\n\nFundacja Maszt otrzymała na jego realizację grant w wysokości **20 000 zł**.\n\nProjekt sfinansowany przez Fundację PKO Banku Polskiego."
+      }
+    ]
+  },
+  {
     "id": "69c03140002838c2bd2f",
     "projectTitle": "W kolorowych ramach",
     "projectSlug": "w-kolorowych-ramach",
