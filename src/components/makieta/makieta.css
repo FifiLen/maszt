@@ -1,0 +1,50 @@
+/*
+  Panele makiety. Pętla w journey.tsx ustawia tylko zmienną --w (0–1: jak bardzo przystanek jest aktywny),
+  a ruch wynika z CSS – na telefonie panel wjeżdża od dołu, na desktopie karta wysuwa się z lewej,
+  zdjęcie odsłania się kurtyną, a treść wchodzi kaskadowo.
+*/
+
+.mk-panel {
+  --w: 0;
+  opacity: var(--w);
+  transform: translate3d(0, calc((1 - var(--w)) * 28px), 0);
+  will-change: opacity, transform;
+}
+
+/* Element treści pojawia się, gdy --w przekroczy jego próg --d. */
+.mk-stagger {
+  --d: 0;
+  opacity: clamp(0, calc((var(--w) - var(--d)) / (1 - var(--d))), 1);
+}
+
+@media (min-width: 768px) {
+  .mk-card {
+    transform: translate3d(calc((1 - var(--w)) * -64px), 0, 0);
+  }
+
+  .mk-card__photo {
+    clip-path: inset(0 0 calc((1 - var(--w)) * 100%) 0 round 20px);
+  }
+
+  .mk-card__photo img {
+    transform: scale(calc(1.18 - var(--w) * 0.18));
+    transform-origin: 50% 30%;
+  }
+
+  .mk-card .mk-stagger {
+    transform: translate3d(0, calc((1 - clamp(0, calc((var(--w) - var(--d)) / (1 - var(--d))), 1)) * 14px), 0);
+  }
+}
+
+/* Niskie okna: rezygnujemy z dodatków, żeby karta zmieściła zdjęcie i przycisk. */
+@media (min-width: 768px) and (max-height: 820px) {
+  .mk-card__stat {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-height: 720px) {
+  .mk-card__also {
+    display: none;
+  }
+}
