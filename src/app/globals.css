@@ -11,9 +11,6 @@
   --font-heading: var(--font-fira-sans);
   --color-maszt-green: #3ead8f;
   --color-maszt-sand: #e8e4df;
-  /* Ciemniejsze odcienie zieleni do tekstu – zieleń marki ma za niski kontrast na piasku. */
-  --color-maszt-deep: #23775f;
-  --color-maszt-ink: #12392f;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -126,14 +123,5 @@
   }
   p {
     @apply tracking-tight font-medium;
-  }
-}
-
-@keyframes scroll-hint {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(300%);
   }
 }

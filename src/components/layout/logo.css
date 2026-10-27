@@ -1,0 +1,49 @@
+/* Logo z trzech masek: kolor każdej części to zwykłe tło, więc zmieniamy go samym CSS. */
+.maszt-logo {
+  --logo-ink: var(--color-maszt-green);
+  --logo-mast: var(--color-maszt-purple);
+  display: grid;
+  /* łódka : odstęp : napis – proporcje szerokości przy tej samej wysokości */
+  grid-template-columns: 724fr 230fr 2250fr;
+  grid-template-rows: 100%;
+  aspect-ratio: 3204 / 1000;
+}
+
+.maszt-logo-part {
+  grid-row: 1;
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  transition: background-color 0.4s ease;
+}
+
+.maszt-logo-boat {
+  grid-column: 1;
+  mask-image: url(/media/logo/logo-boat.png);
+  background-color: var(--logo-ink);
+}
+
+.maszt-logo-mast {
+  grid-column: 1;
+  mask-image: url(/media/logo/logo-mast.png);
+  background-color: var(--logo-mast);
+}
+
+.maszt-logo-text {
+  grid-column: 3;
+  mask-image: url(/media/logo/logo-text.png);
+  background-color: var(--logo-ink);
+}
+
+/* Logo w nagłówku dopasowuje się do sekcji pod nim (data-header na sekcji, SiteHeader.tsx przepisuje to
+   na data-header-under na <html>). Zanim zadziała JS, strona z ciemnym hero od razu ma białe logo. */
+:root:has([data-header="dark"]):not([data-header-under]) .logo-auto,
+:root[data-header-under="dark"] .logo-auto {
+  --logo-ink: #fff;
+}
+
+/* Na fiolecie fioletowy maszt by zniknął – całe logo białe. Na zielonym zniknęłaby łódka i napis – też biało. */
+:root[data-header-under="purple"] .logo-auto,
+:root[data-header-under="green"] .logo-auto {
+  --logo-ink: #fff;
+  --logo-mast: #fff;
+}

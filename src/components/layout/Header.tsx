@@ -78,9 +78,7 @@ export function Header() {
   // Dynamiczne kolory headera
   const headerTextColor = menuOpen ? "text-[#e8e4df]" : "text-[#3ead8f]";
   // Usunięto całkowicie bordery z logiki tła
-  // Na makiecie nagłówek unosi się nad sceną 3D bez tła.
-  const immersive = pathname === '/prototyp';
-  const headerBgColor = menuOpen || immersive ? "bg-transparent" : (isScrolled ? "bg-[#e8e4df]" : "bg-transparent");
+  const headerBgColor = menuOpen ? "bg-transparent" : (isScrolled ? "bg-[#e8e4df]" : "bg-transparent");
 
   return (
     <>
