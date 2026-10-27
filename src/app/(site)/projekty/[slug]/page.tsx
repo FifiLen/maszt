@@ -1,4 +1,4 @@
-import BlockRenderer from "@/app/test/components/blockRenderer";
+import BlockRenderer from "@/app/(site)/test/components/blockRenderer";
 import { getProjectBySlug, getProjects } from "@/lib/projects";
 import { notFound } from "next/navigation";
 

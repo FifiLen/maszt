@@ -1,0 +1,204 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-figtree);
+  --font-heading: var(--font-figtree);
+  --font-mono: var(--font-geist-mono);
+
+  /* Skala typograficzna (jak w pokazie dla Tenixa): duże, mocno ściśnięte nagłówki. */
+  --text-h1: clamp(3rem, 7.4vw, 7.5rem);
+  --text-h1--line-height: 0.92;
+  --text-h1--letter-spacing: -0.045em;
+  --text-h2: clamp(2.25rem, 4.4vw, 4.25rem);
+  --text-h2--line-height: 0.98;
+  --text-h2--letter-spacing: -0.035em;
+  --text-lead: clamp(1.75rem, 3.3vw, 3.25rem);
+  --text-lead--line-height: 1.1;
+  --text-lead--letter-spacing: -0.03em;
+  --text-figure: clamp(4.5rem, 9vw, 9rem);
+  --text-figure--line-height: 0.85;
+  --text-figure--letter-spacing: -0.05em;
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --color-maszt-green: #3ead8f;
+  --color-maszt-sand: #e8e4df;
+  /* Fiolet masztu z logo – też tło sekcji „Skąd się wzięliśmy”. */
+  --color-maszt-purple: #8c4693;
+  /* Ciemniejsze odcienie zieleni do tekstu – zieleń marki ma za niski kontrast na piasku. */
+  --color-maszt-deep: #23775f;
+  --color-maszt-ink: #12392f;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  --background: oklch(0.99 0.01 70); /* Light beige backrgound */
+  --foreground: oklch(0.2 0.05 260); /* Deep navy foreground */
+  
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.05 260);
+  
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.05 260);
+  
+  --primary: oklch(0.58 0.22 25); /* Maszt Red */
+  --primary-foreground: oklch(1 0 0);
+  
+  --secondary: oklch(0.85 0.15 90); /* Sand / Warm yellow */
+  --secondary-foreground: oklch(0.2 0.05 260);
+  
+  --muted: oklch(0.96 0.02 70);
+  --muted-foreground: oklch(0.5 0.02 260);
+  
+  --accent: oklch(0.96 0.02 70);
+  --accent-foreground: oklch(0.58 0.22 25); /* Maszt Red accent */
+  
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  
+  --border: oklch(0.9 0.02 70);
+  --input: oklch(0.9 0.02 70);
+  --ring: var(--color-maszt-deep); /* Obrys fokusu w zieleni marki */
+  
+  --radius: 0rem;
+}
+
+.dark {
+  --background: oklch(0.15 0.03 260); /* Deep navy backrgound */
+  --foreground: oklch(0.99 0.01 70); /* Light beige foreground */
+  
+  --card: oklch(0.2 0.04 260);
+  --card-foreground: oklch(0.99 0.01 70);
+  
+  --popover: oklch(0.2 0.04 260);
+  --popover-foreground: oklch(0.99 0.01 70);
+  
+  --primary: oklch(0.65 0.22 25); /* Lighter Maszt Red for dark mode */
+  --primary-foreground: oklch(1 0 0);
+  
+  --secondary: oklch(0.3 0.1 90); /* Darker sand */
+  --secondary-foreground: oklch(0.99 0.01 70);
+  
+  --muted: oklch(0.25 0.04 260);
+  --muted-foreground: oklch(0.7 0.02 260);
+  
+  --accent: oklch(0.25 0.04 260);
+  --accent-foreground: oklch(0.65 0.22 25);
+  
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  
+  --border: oklch(0.3 0.04 260);
+  --input: oklch(0.3 0.04 260);
+  --ring: oklch(0.65 0.22 25);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight leading-[1.1];
+  }
+}
+
+/* 12 kolumn na pełną szerokość + 20 px marginesu po bokach.
+   Linie: 1 = lewa krawędź, 2–13 = kolumny treści, 14 = koniec treści, 15 = prawa krawędź. */
+@utility grid-site {
+  display: grid;
+  grid-template-columns: 1.25rem repeat(12, minmax(0, 1fr)) 1.25rem;
+  column-gap: 0;
+
+  @media (width >= 64rem) {
+    grid-template-columns: 0 repeat(12, minmax(0, 1fr)) 0;
+    column-gap: 1.25rem;
+    padding-inline: 0.25rem; /* krawędź treści = 24 px, równo z pigułkami nagłówka */
+  }
+}
+
+/* Kotwice (np. „Zobacz, jak działamy”) przewijają płynnie. data-scroll-behavior na <html> mówi Next.js,
+   żeby przy zmianie strony przewijał od razu. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Wjazd elementu przy przewijaniu – w CSS (scroll-driven). Bez wsparcia albo przy ograniczonym ruchu treść po prostu stoi. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal,
+    .reveal-stagger > * {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+    .reveal-stagger > :nth-child(2) {
+      animation-range: entry 8% entry 78%;
+    }
+    .reveal-stagger > :nth-child(3) {
+      animation-range: entry 16% entry 86%;
+    }
+    .reveal-stagger > :nth-child(4) {
+      animation-range: entry 24% entry 94%;
+    }
+  }
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    translate: 0 48px;
+  }
+}
+
+@keyframes scroll-hint {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(300%);
+  }
+}
